@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bear.cakeonline.user.service.UserServiceImpl;
 import com.bear.cakeonline.entity.User;
@@ -21,12 +22,12 @@ public class UserController {
 	@RequestMapping("/list")
 	public String list(Model model){
 		List<User> list=this.userServiceImpl.listAll();
-		model.addAttribute("list", list);
-		return "list";
+		model.addAttribute("userlist", list);
+		return "";
 	}
 	
 	@RequestMapping("/save")
-	public String save(Model model,String username,String password,String phone,String address) {
+	public String save(Model model,@RequestParam String username,@RequestParam String password,@RequestParam String phone,@RequestParam String address) {
 		User user = new User();
 		user.setUsername(username);
 		user.setPassword(password);
@@ -38,7 +39,7 @@ public class UserController {
 	}
 	
 	@RequestMapping("/update")
-	public String update(Model model,String username,String password,String phone,String address) {
+	public String update(Model model,@RequestParam String username,@RequestParam String password,@RequestParam String phone,@RequestParam String address) {
 		User user = new User();
 		user.setUsername(username);
 		user.setPassword(password);
@@ -50,7 +51,7 @@ public class UserController {
 	}
 	
 	@RequestMapping("/newpwd")
-	public String newpwd(Model model,String username,String password,String phone,String address) {
+	public String newpwd(Model model,@RequestParam String username,@RequestParam String password,@RequestParam String phone,@RequestParam String address) {
 		List<User> list=this.userServiceImpl.listAll();
 		for(int i = 0;i < list.size();i++) {
 			if(list.get(i).getUsername().equals(username) && list.get(i).getPhone().equals(phone) && list.get(i).getAddress().equals(address)) {
@@ -68,7 +69,7 @@ public class UserController {
 	}
 	
 	@RequestMapping("/login")
-	public String login(Model model,String username,String password) {
+	public String login(Model model,@RequestParam String username,@RequestParam String password) {
 		List<User> list=this.userServiceImpl.listAll();
 		for(int i = 0;i < list.size();i++) {
 			if(list.get(i).getUsername().equals(username) && list.get(i).getPassword().equals(password)) {
@@ -76,7 +77,7 @@ public class UserController {
 				break;
 			}
 		}
-		model.addAttribute("fails","login fails!");
+		model.addAttribute("fails","ÃÜÂë´íÎó!");
 		return "index";
 	}
 	
@@ -87,7 +88,7 @@ public class UserController {
 	}
 	
 	@RequestMapping("/delete")
-	public String delete(String username) {
+	public String delete(@RequestParam String username) {
 		userServiceImpl.deleteUser(username);
 		return "";
 	}

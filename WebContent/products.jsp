@@ -301,362 +301,55 @@
 	<!--products-->
 	<div class="products">	 
 		<div class="container">
-			<h2>Our Products</h2>			
+			<h2>蛋糕</h2>
 			<div class="col-md-9 product-model-sec">
-				<div class="product-grid">
-					<a href="single.jsp">				
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="${contextpath }/static/images/m1.png" class="img-responsive" alt="">
-							<div class="b-wrapper">
-								<h4 class="b-animate b-from-left  b-delay03">							
-									<button>View</button>
-								</h4>
+				<c:forEach items="${cakelist }" var="cake">	
+					<div class="product-grid">
+						<a href="${contextpath }/cake/single?cakeid=${cake.getId() }">	
+							<div class="more-product"><span> </span></div>						
+							<div class="product-img b-link-stripe b-animate-go  thickbox">
+								<img src="${contextpath }/static/images/${cake.getListimg() }" class="img-responsive" alt="">
+								<div class="b-wrapper">
+									<h4 class="b-animate b-from-left  b-delay03">							
+										<button>View</button>
+									</h4>
+								</div>
 							</div>
+						</a>				
+						<div class="product-info simpleCart_shelfItem">
+							<div class="product-info-cust prt_name">
+								<h4>${cake.getName() }</h4>								
+								<span class="item_price">￥${cake.getDiscountprice() }</span>
+								<div class="ofr">
+									<p class="pric1"><del>￥${cake.getPrice() }</del></p>
+									<p class="disc">[${100-cake.getDiscountprice()/cake.getPrice()*100 }% Off]</p>
+								</div>
+								<input type="text" class="item_quantity" value="1" />
+								<input type="button" class="item_add items" value="Add">
+								<div class="clearfix"> </div>
+							</div>												
 						</div>
-					</a>				
-					<div class="product-info simpleCart_shelfItem">
-						<div class="product-info-cust prt_name">
-							<h4>Product #1</h4>								
-							<span class="item_price">$2000.00</span>
-							<div class="ofr">
-								<p class="pric1"><del>$2300.00</del></p>
-								<p class="disc">[15% Off]</p>
-							</div>
-							<input type="text" class="item_quantity" value="1" />
-							<input type="button" class="item_add items" value="Add">
-							<div class="clearfix"> </div>
-						</div>												
 					</div>
-				</div>
-				<div class="product-grid">
-					<a href="single.jsp">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="${contextpath }/static/images/m2.png" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button>View</button>
-							</h4>
-							</div>
-						</div>
-					</a>				
-					<div class="product-info simpleCart_shelfItem">
-						<div class="product-info-cust prt_name">
-							<h4>Product #1</h4>								
-							<span class="item_price">$2000.00</span>
-							<div class="ofr">
-								<p class="pric1"><del>$2300.00</del></p>
-								<p class="disc">[15% Off]</p>
-							</div>
-							<input type="text" class="item_quantity" value="1" />
-							<input type="button" class="item_add items" value="Add">
-							<div class="clearfix"> </div>
-						</div>						
-					</div>
-				</div>
-				<div class="product-grid">
-					<a href="single.jsp">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="${contextpath }/static/images/m3.png" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button> View </button>
-							</h4>
-							</div>
-						</div>
-					</a>				
-					<div class="product-info simpleCart_shelfItem">
-						<div class="product-info-cust prt_name">
-							<h4>Product #1</h4>								
-							<span class="item_price">$2000.00</span>
-							<div class="ofr">
-								<p class="pric1"><del>$2300.00</del></p>
-								<p class="disc">[15% Off]</p>
-							</div>
-							<input type="text" class="item_quantity" value="1" />
-							<input type="button" class="item_add items" value="Add">
-							<div class="clearfix"> </div>
-						</div>						
-					</div>
-				</div>
-				<div class="product-grid">
-					<a href="single.jsp">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="${contextpath }/static/images/m4.png" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button> View </button>
-							</h4>
-							</div>
-						</div>
-					</a>				
-					<div class="product-info simpleCart_shelfItem">
-						<div class="product-info-cust prt_name">
-							<h4>Product #1</h4>								
-							<span class="item_price">$2000.00</span>
-							<div class="ofr">
-								<p class="pric1"><del>$2300.00</del></p>
-								<p class="disc">[15% Off]</p>
-							</div>
-							<input type="text" class="item_quantity" value="1" />
-							<input type="button" class="item_add items" value="Add">
-							<div class="clearfix"> </div>
-						</div>							
-					</div>
-				</div>
-				<div class="product-grid">
-					<a href="single.jsp">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="${contextpath }/static/images/m5.png" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button> View </button>
-							</h4>
-							</div>
-						</div>
-					</a>				
-					<div class="product-info simpleCart_shelfItem">
-						<div class="product-info-cust prt_name">
-							<h4>Product #1</h4>								
-							<span class="item_price">$2000.00</span>
-							<div class="ofr">
-								<p class="pric1"><del>$2300.00</del></p>
-								<p class="disc">[15% Off]</p>
-							</div>
-							<input type="text" class="item_quantity" value="1" />
-							<input type="button" class="item_add items" value="Add">
-							<div class="clearfix"> </div>
-						</div>							
-					</div>
-				</div>
-				<div class="product-grid">
-					<a href="single.jsp">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="${contextpath }/static/images/m6.png" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button> View </button>
-							</h4>
-							</div>
-						</div>
-					</a>				
-					<div class="product-info simpleCart_shelfItem">
-						<div class="product-info-cust prt_name">
-							<h4>Product #1</h4>								
-							<span class="item_price">$2000.00</span>
-							<div class="ofr">
-								<p class="pric1"><del>$2300.00</del></p>
-								<p class="disc">[15% Off]</p>
-							</div>
-							<input type="text" class="item_quantity" value="1" />
-							<input type="button" class="item_add items" value="Add">
-							<div class="clearfix"> </div>
-						</div>						
-					</div>
-				</div>
-				<div class="product-grid">
-					<a href="single.jsp">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="${contextpath }/static/images/m7.png" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button> View </button>
-							</h4>
-							</div>
-						</div>
-					</a>				
-					<div class="product-info simpleCart_shelfItem">
-						<div class="product-info-cust prt_name">
-							<h4>Product #1</h4>								
-							<span class="item_price">$2000.00</span>
-							<div class="ofr">
-								<p class="pric1"><del>$2300.00</del></p>
-								<p class="disc">[15% Off]</p>
-							</div>
-							<input type="text" class="item_quantity" value="1" />
-							<input type="button" class="item_add items" value="Add">
-							<div class="clearfix"> </div>
-						</div>						
-					</div>
-				</div>
-				<div class="product-grid">
-					<a href="single.jsp">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="${contextpath }/static/images/m8.png" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button> View </button>
-							</h4>
-							</div>
-						</div>
-					</a>				
-					<div class="product-info simpleCart_shelfItem">
-						<div class="product-info-cust prt_name">
-							<h4>Product #1</h4>								
-							<span class="item_price">$2000.00</span>
-							<div class="ofr">
-								<p class="pric1"><del>$2300.00</del></p>
-								<p class="disc">[15% Off]</p>
-							</div>
-							<input type="text" class="item_quantity" value="1" />
-							<input type="button" class="item_add items" value="Add">
-							<div class="clearfix"> </div>
-						</div>							
-					</div>
-				</div>
-				<div class="product-grid">
-					<a href="single.jsp">
-						<div class="more-product"><span> </span></div>						
-						<div class="product-img b-link-stripe b-animate-go  thickbox">
-							<img src="${contextpath }/static/images/m9.png" class="img-responsive" alt=""/>
-							<div class="b-wrapper">
-							<h4 class="b-animate b-from-left  b-delay03">							
-							<button> View </button>
-							</h4>
-							</div>
-						</div>
-					</a>				
-					<div class="product-info simpleCart_shelfItem">
-						<div class="product-info-cust prt_name">
-							<h4>Product #1</h4>								
-							<span class="item_price">$2000.00</span>
-							<div class="ofr">
-								<p class="pric1"><del>$2300.00</del></p>
-								<p class="disc">[15% Off]</p>
-							</div>
-							<input type="text" class="item_quantity" value="1" />
-							<input type="button" class="item_add items" value="Add">
-							<div class="clearfix"> </div>
-						</div>						
-					</div>
-				</div>
+				</c:forEach>
 			</div>	
 			<div class="col-md-3 rsidebar span_1_of_left">
 				<section  class="sky-form">
-					<div class="product_right">
-						<h4 class="m_2"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Categories</h4>
-						<div class="tab1">
-							<ul class="place">								
-								<li class="sort">Regular Cakes</li>
-								<li class="by"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></li>								
-							</ul>
-							<div class="clearfix"> </div>
-							<div class="single-bottom">						
-								<a href="#"><p>Cassata</p></a>
-								<a href="#"><p>Cheesecake</p></a>
-								<a href="#"><p>Coconut cake</p></a>
-								<a href="#"><p>Cupcake</p></a>
-						    </div>
-					    </div>						  
-						<div class="tab2">
-							<ul class="place">								
-								<li class="sort">Special Cakes</li>
-								<li class="by"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></li>
-							</ul>
-							<div class="clearfix"> </div>
-							<div class="single-bottom">						
-								<a href="#"><p>Delicious Cakes</p></a>
-								<a href="#"><p>Gingerbread</p></a>									
-						    </div>
-					    </div>
-						<div class="tab3">
-							<ul class="place">								
-								<li class="sort">Eggless Cake</li>
-								<li class="by"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></li>
-							</ul>
-							<div class="clearfix"> </div>
-							<div class="single-bottom">						
-								<a href="#"><p>Milk Cakes</p></a>
-								<a href="#"><p>Fruits Cakes</p></a>
-						    </div>
-					    </div>
-						<div class="tab4">
-							<ul class="place">								
-								<li class="sort">2-3 Tier Cakes</li>
-								<li class="by"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></li>
-							</ul>
-							<div class="clearfix"> </div>
-							<div class="single-bottom">						
-								<a href="#"><p>Twist 4 tier</p></a>
-								<a href="#"><p>Floral Tier</p></a>
-								<a href="#"><p>Double Heartshape</p></a>
-						    </div>
-					    </div>
-						<!--script-->
-						<script>
-							$(document).ready(function(){
-								$(".tab1 .single-bottom").hide();
-								$(".tab2 .single-bottom").hide();
-								$(".tab3 .single-bottom").hide();
-								$(".tab4 .single-bottom").hide();
-								$(".tab5 .single-bottom").hide();
-								
-								$(".tab1 ul").click(function(){
-									$(".tab1 .single-bottom").slideToggle(300);
-									$(".tab2 .single-bottom").hide();
-									$(".tab3 .single-bottom").hide();
-									$(".tab4 .single-bottom").hide();
-									$(".tab5 .single-bottom").hide();
-								})
-								$(".tab2 ul").click(function(){
-									$(".tab2 .single-bottom").slideToggle(300);
-									$(".tab1 .single-bottom").hide();
-									$(".tab3 .single-bottom").hide();
-									$(".tab4 .single-bottom").hide();
-									$(".tab5 .single-bottom").hide();
-								})
-								$(".tab3 ul").click(function(){
-									$(".tab3 .single-bottom").slideToggle(300);
-									$(".tab4 .single-bottom").hide();
-									$(".tab5 .single-bottom").hide();
-									$(".tab2 .single-bottom").hide();
-									$(".tab1 .single-bottom").hide();
-								})
-								$(".tab4 ul").click(function(){
-									$(".tab4 .single-bottom").slideToggle(300);
-									$(".tab5 .single-bottom").hide();
-									$(".tab3 .single-bottom").hide();
-									$(".tab2 .single-bottom").hide();
-									$(".tab1 .single-bottom").hide();
-								})	
-								$(".tab5 ul").click(function(){
-									$(".tab5 .single-bottom").slideToggle(300);
-									$(".tab4 .single-bottom").hide();
-									$(".tab3 .single-bottom").hide();
-									$(".tab2 .single-bottom").hide();
-									$(".tab1 .single-bottom").hide();
-								})	
-							});
-						</script>
-						<!--//script -->	
-					</div>
-				</section>
-				<section  class="sky-form">
-					<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>DISCOUNTS</h4>
+					<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>按对象</h4>
 					<div class="row row1 scroll-pane">
 						<div class="col col-4">
-							<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Upto - 10% (20)</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>送朋友</label>
 						</div>
 						<div class="col col-4">
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>70% - 60% (5)</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>50% - 40% (7)</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>30% - 20% (2)</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>10% - 5% (5)</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>30% - 20% (7)</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>10% - 5% (2)</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other(50)</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>送恋人</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>送长辈</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>送领导</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>送客户</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>送儿童</label>
 						</div>
 					</div>
 				</section>  				 
 				<section  class="sky-form">
-					<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Price</h4>
+					<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>价格</h4>
 					<ul class="dropdown-menu1">
 						<li><a href="">								               
 							<div id="slider-range"></div>							
@@ -672,58 +365,45 @@
 						 $( "#slider-range" ).slider({
 									range: true,
 									min: 0,
-									max: 100000,
-									values: [ 500, 100000 ],
-									slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+									max: 5000,
+									values: [ 100, 5000 ],
+									slide: function( event, ui ) {  $( "#amount" ).val( "￥" + ui.values[ 0 ] + " - ￥" + ui.values[ 1 ] );
 									}
 						 });
-						$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+						$( "#amount" ).val( "￥" + $( "#slider-range" ).slider( "values", 0 ) + " - ￥" + $( "#slider-range" ).slider( "values", 1 ) );
 
 						});//]]> 
 					</script>
 				<!---->
 				<section  class="sky-form">
-					<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>By Flavour</h4>
+					<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>按材料</h4>
 					<div class="row row1 scroll-pane">
 						<div class="col col-4">
-							<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Vanilla</label>			
+							<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>奶油</label>			
 						</div>
 						<div class="col col-4">
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Chocolate</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Butterscotch</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Strawberry</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Black Forest</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Mixed Fruit</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Honey</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>巧克力</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>水果</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>慕斯</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>彩虹</label>
 						</div>
 					</div>
 				</section>
 				<section  class="sky-form">
-					<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Weight</h4>
+					<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>造型</h4>
 					<div class="row row1 scroll-pane">
 						<div class="col col-4">
-							<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Half KG</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>圆形</label>
 						</div>		
 						<div class="col col-4">
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>One KG</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>TwO KG</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>More</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>心形</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>方形</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>多层</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>生肖</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>艺术</label>
 						</div>
 					</div>
 				</section>	
-				<section  class="sky-form">
-					<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Color</h4>
-					<div class="row row1 scroll-pane">
-						<div class="col col-4">
-							<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>White</label>
-						</div>
-						<div class="col col-4">
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Pink</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Gold</label>
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Silver</label>
-						</div>
-					</div>
-				</section>			 
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -736,7 +416,7 @@
 				<div class="col-md-2 footer-grid">
 					<h4>company</h4>
 					<ul>
-						<li><a href="products.jsp">products</a></li>
+						<li><a href="${contextpath }/products.jsp">products</a></li>
 						<li><a href="#">Work Here</a></li>
 						<li><a href="#">Team</a></li>
 						<li><a href="#">Happenings</a></li>
@@ -749,7 +429,7 @@
 						<li><a href="#">Support</a></li>
 						<li><a href="#">FAQ</a></li>
 						<li><a href="#">Warranty</a></li>
-						<li><a href="contact.jsp">Contact Us</a></li>
+						<li><a href="${contextpath }/contact.jsp">Contact Us</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 footer-grid">

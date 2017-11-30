@@ -39,200 +39,132 @@
 				<!--navbar-header-->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a href="${contextpath }/index.jsp" class="active">Home</a></li>
+						<li><a href="${contextpath }/index.jsp" class="active">首页</a></li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Birthday<b class="caret"></b></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">生日蛋糕<b class="caret"></b></a>
 							<ul class="dropdown-menu multi-column columns-4">
 								<div class="row">
 									<div class="col-sm-3">
-										<h4>By Relation</h4>
+										<h4>按对象</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/products.jsp">Friend</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Lover</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Sister</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Brother</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Kids</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Parents</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">送朋友</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">送恋人</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">送长辈</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">送领导</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">送客户</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">送儿童</a></li>
 										</ul>
 									</div>																		
 									<div class="col-sm-3">
-										<h4>By Flavour</h4>
+										<h4>按材料</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Chocolate</a></li>
-											<li><a class="list" href="products.jsp">Mixed Fruit</a></li>
-											<li><a class="list" href="products.jsp">Butterscotch</a></li>
-											<li><a class="list" href="products.jsp">Strawberry</a></li>
-											<li><a class="list" href="products.jsp">Vanilla</a></li>
-											<li><a class="list" href="products.jsp">Eggless Cakes</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">巧克力蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">欧式水果蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">奶油蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">慕斯蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">彩虹蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
-										<h4>By Theme</h4>
+										<h4>按造型</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Heart shaped</a></li>
-											<li><a class="list" href="products.jsp">Cartoon Cakes</a></li>
-											<li><a class="list" href="products.jsp">2-3 Tier Cakes</a></li>
-											<li><a class="list" href="products.jsp">Square shape</a></li>
-											<li><a class="list" href="products.jsp">Round shape</a></li>
-											<li><a class="list" href="products.jsp">Photo cakes</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">心形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">圆形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">方形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">生肖蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">多层蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">艺术蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
-										<h4>Weight</h4>
+										<h4>按价格</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">1 kG</a></li>
-											<li><a class="list" href="products.jsp">1.5 kG</a></li>
-											<li><a class="list" href="products.jsp">2 kG</a></li>
-											<li><a class="list" href="products.jsp">3 kG</a></li>
-											<li><a class="list" href="products.jsp">4 kG</a></li>
-											<li><a class="list" href="products.jsp">Large</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">0-100</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">100-300</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">300-600</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">600-1000</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">1000-10000</a></li>
 										</ul>
 									</div>
 								</div>
 							</ul>
 						</li>
 					   <li class="dropdown grid">
-							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown">Wedding<b class="caret"></b></a>
+							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown">爱情蛋糕<b class="caret"></b></a>
 							<ul class="dropdown-menu multi-column columns-4">
-								<div class="row">
+								<div class="row">																	
 									<div class="col-sm-3">
-										<h4>By Relation</h4>
+										<h4>按材料</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/products.jsp">Friend</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Lover</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Sister</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Brother</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Kids</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Parents</a></li>
-										</ul>
-									</div>																		
-									<div class="col-sm-3">
-										<h4>By Flavour</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/products.jsp">Chocolate</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Mixed Fruit</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Butterscotch</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Strawberry</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Vanilla</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Eggless Cakes</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">巧克力蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">欧式水果蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">奶油蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">慕斯蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">彩虹蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
-										<h4>By Theme</h4>
+										<h4>按造型</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/products.jsp">Heart shaped</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Cartoon Cakes</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">2-3 Tier Cakes</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Square shape</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Round shape</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Photo cakes</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">心形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">圆形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">方形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">生肖蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">多层蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">艺术蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
-										<h4>Weight</h4>
+										<h4>按价格</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/products.jsp">1 kG</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">1.5 kG</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">2 kG</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">3 kG</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">4 kG</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Large</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">0-100</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">100-300</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">300-600</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">600-1000</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">1000-10000</a></li>
 										</ul>
 									</div>
 								</div>
 							</ul>
 						</li>				
 						<li class="dropdown grid">
-							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown">Special Offers <b class="caret"></b></a>
+							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown">婚礼蛋糕<b class="caret"></b></a>
 							<ul class="dropdown-menu multi-column columns-4">
-								<div class="row">
+								<div class="row">																
 									<div class="col-sm-3">
-										<h4>By Relation</h4>
+										<h4>按材料</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/products.jsp">Friend</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Lover</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Sister</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Brother</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Kids</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Parents</a></li>
-										</ul>
-									</div>																		
-									<div class="col-sm-3">
-										<h4>By Flavour</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/products.jsp">Chocolate</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Mixed Fruit</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Butterscotch</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Strawberry</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Vanilla</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Eggless Cakes</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">巧克力蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">欧式水果蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">奶油蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">慕斯蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">彩虹蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
-										<h4>By Theme</h4>
+										<h4>按造型</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/products.jsp">Heart shaped</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Cartoon Cakes</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">2-3 Tier Cakes</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Square shape</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Round shape</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Photo cakes</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">心形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">圆形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">方形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">生肖蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">多层蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">艺术蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
-										<h4>Weight</h4>
+										<h4>按价格</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/products.jsp">1 kG</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">1.5 kG</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">2 kG</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">3 kG</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">4 kG</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Large</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">0-100</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">100-300</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">300-600</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">600-1000</a></li>
+											<li><a class="list" href="${contextpath }/cake/list">1000-10000</a></li>
 										</ul>
 									</div>
 								</div>
 							</ul>
-						</li>
-						<li class="dropdown grid">
-							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown">Store<b class="caret"></b></a>
-							<ul class="dropdown-menu multi-column columns-3">
-								<div class="row">
-									<div class="col-sm-4">
-										<h4>By Relation</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/products.jsp">Friend</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Lover</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Sister</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Brother</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Kids</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Parents</a></li>
-										</ul>
-									</div>																		
-									<div class="col-sm-4">
-										<h4>By Flavour</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/products.jsp">Chocolate</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Mixed Fruit</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Butterscotch</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Strawberry</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Vanilla</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Eggless Cakes</a></li>
-										</ul>
-									</div>								
-									<div class="col-sm-4">
-										<h4>Specials</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/products.jsp">Ice cream cake</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Swiss roll</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Ruske kape</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Cupcakes</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Muffin</a></li>
-											<li><a class="list" href="${contextpath }/products.jsp">Merveilleux</a></li>										
-										</ul>
-									</div>
-								</div>
-							</ul>
-						</li>								
+						</li>				
 					</ul> 
 					<!--/.navbar-collapse-->
 				</div>
@@ -242,10 +174,10 @@
 				<div class="header-right search-box">
 					<a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>				
 					<div class="search">
-						<form class="navbar-form">
-							<input type="text" class="form-control">
+						<form class="navbar-form" action="">
+							<input type="text" class="form-control" name="search" >
 							<button type="submit" class="btn btn-default" aria-label="Left Align">
-								Search
+								搜索
 							</button>
 						</form>
 					</div>	
@@ -256,9 +188,9 @@
 						<c:if test="${username != null }">
 							<form id="loginForm">
 							<br>
-							<h3>Hello，<a class="sign" href="#">${username }</a> <span><a href="${contextpath }/user/loginout">log off</a></span></h3>
+							<h3>欢迎您，<a class="sign" href="#">${username }</a>！<span><a href="${contextpath }/user/loginout">注销</a></span></h3>
 							<br>
-							<h4><span><a href="${contextpath }/information.jsp">Modifying personal information</a></span></h4>
+							<h4><span><a href="${contextpath }/information.jsp">修改个人信息</a></span></h4>
 							</form>
 						</c:if>
 						<c:if test="${username == null }">
@@ -266,17 +198,17 @@
 								<fieldset id="body">
 								<h4>${fails }</h4>
 									<fieldset>
-										<label for="email">UserName</label>
+										<label for="email">用户名</label>
 										<input type="text" name="username" id="email">
 									</fieldset>
 									<fieldset>
-										<label for="password">PassWord</label>
+										<label for="password">密码</label>
 										<input type="password" name="password" id="password">
 									</fieldset>
-									<input type="submit" id="login" value="Sign in">
-									<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+									<input type="submit" id="login" value="登录">
+									<label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住我</i></label>
 								</fieldset>
-								<p>New User ? <a class="sign" href="${contextpath }/account.jsp">Sign Up</a> <span><a href="${contextpath }/password.jsp">Forgot your password?</a></span></p>
+								<p>新用户 ? <a class="sign" href="${contextpath }/account.jsp">注册</a> <span><a class="sign" href="${contextpath }/password.jsp">忘记密码?</a><a href="${contextpath }/adminlogin.jsp">店长登录</a></span></p>
 							</form>
 						</c:if>
 					</div>
@@ -287,7 +219,7 @@
 						<h4><a href="checkout.jsp">
 							<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>) 
 						</a></h4>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
+						<p><a href="javascript:;" class="simpleCart_empty">清空购物车</a></p>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -302,7 +234,7 @@
 		<div class="container">
 			<h2 class="hdng">Yummy <span>Cakes</span> for u</h2>
 			<p>Our best cakes make your day special</p>
-			<a href="${contextpath }/products.jsp">SHOP NOW</a>
+			<a href="${contextpath }/cake/list">逛一逛</a>
 			<div class="banner-text">			
 				<img src="${contextpath }/static/images/2.png" alt=""/>	
 			</div>
@@ -314,18 +246,18 @@
 		<div class="container">
 			<div class="gallery-grids">
 				<div class="col-md-8 gallery-grid glry-one">
-					<a href="${contextpath }/products.jsp"><img src="${contextpath }/static/images/g1.jpg" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/g1.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/single.jsp">SHOP NOW</a>
+							<a class="shop" href="${contextpath }/cake/single?cakeid=19">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
 					<div class="galy-info">
-						<p>Lorem Ipsum is simply</p>
+						<p>毕加索巧克力</p>
 						<div class="galry">
 							<div class="prices">
-								<h5 class="item_price">$95.00</h5>
+								<h5 class="item_price">￥418.00</h5>
 							</div>
 							<div class="rating">
 								<span>☆</span>
@@ -339,18 +271,18 @@
 					</div>
 				</div>
 				<div class="col-md-4 gallery-grid glry-two">
-					<a href="${contextpath }/products.jsp"><img src="${contextpath }/static/images/g2.jpg" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/g2.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info galrr-info-two">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/single.jsp">SHOP NOW</a>
+							<a class="shop" href="${contextpath }/cake/single?cakeid=20">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
 					<div class="galy-info">
-						<p>Lorem Ipsum is simply</p>
+						<p>幸福约定</p>
 						<div class="galry">
 							<div class="prices">
-								<h5 class="item_price">$95.00</h5>
+								<h5 class="item_price">￥998.00</h5>
 							</div>
 							<div class="rating">
 								<span>☆</span>
@@ -364,18 +296,18 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/products.jsp"><img src="${contextpath }/static/images/g3.png" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake1.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/single.jsp">SHOP NOW</a>
+							<a class="shop" href="${contextpath }/cake/single?cakeid=1">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
 					<div class="galy-info">
-						<p>Lorem Ipsum is simply</p>
+						<p>细细的爱</p>
 						<div class="galry">
 							<div class="prices">
-								<h5 class="item_price">$95.00</h5>
+								<h5 class="item_price">￥178.00</h5>
 							</div>
 							<div class="rating">
 								<span>☆</span>
@@ -389,18 +321,18 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/products.jsp"><img src="${contextpath }/static/images/g4.png" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake6.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/single.jsp">SHOP NOW</a>
+							<a class="shop" href="${contextpath }/cake/single?cakeid=6">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
 					<div class="galy-info">
-						<p>Lorem Ipsum is simply</p>
+						<p>心心相印</p>
 						<div class="galry">
 							<div class="prices">
-								<h5 class="item_price">$95.00</h5>
+								<h5 class="item_price">￥318.00</h5>
 							</div>
 							<div class="rating">
 								<span>☆</span>
@@ -414,18 +346,18 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/products.jsp"><img src="${contextpath }/static/images/g5.png" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake9.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/single.jsp">SHOP NOW</a>
+							<a class="shop" href="${contextpath }/cake/single?cakeid=9">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
 					<div class="galy-info">
-						<p>Lorem Ipsum is simply</p>
+						<p>你我相连</p>
 						<div class="galry">
 							<div class="prices">
-								<h5 class="item_price">$95.00</h5>
+								<h5 class="item_price">￥258.00</h5>
 							</div>
 							<div class="rating">
 								<span>☆</span>
@@ -439,18 +371,18 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/products.jsp"><img src="${contextpath }/static/images/g6.png" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake13.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/single.jsp">SHOP NOW</a>
+							<a class="shop" href="${contextpath }/cake/single?cakeid=13">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
 					<div class="galy-info">
-						<p>Lorem Ipsum is simply</p>
+						<p>父爱如山</p>
 						<div class="galry">
 							<div class="prices">
-								<h5 class="item_price">$95.00</h5>
+								<h5 class="item_price">￥426.00</h5>
 							</div>
 							<div class="rating">
 								<span>☆</span>
@@ -464,18 +396,18 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/products.jsp"><img src="${contextpath }/static/images/g7.png" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake2.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/single.jsp">SHOP NOW</a>
+							<a class="shop" href="${contextpath }/cake/single?cakeid=2">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
 					<div class="galy-info">
-						<p>Lorem Ipsum is simply</p>
+						<p>全心全意</p>
 						<div class="galry">
 							<div class="prices">
-								<h5 class="item_price">$95.00</h5>
+								<h5 class="item_price">￥198.00</h5>
 							</div>
 							<div class="rating">
 								<span>☆</span>
@@ -489,18 +421,18 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/products.jsp"><img src="${contextpath }/static/images/g8.png" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake7.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/single.jsp">SHOP NOW</a>
+							<a class="shop" href="${contextpath }/cake/single?cakeid=7">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
 					<div class="galy-info">
-						<p>Lorem Ipsum is simply</p>
+						<p>幸福甜蜜</p>
 						<div class="galry">
 							<div class="prices">
-								<h5 class="item_price">$95.00</h5>
+								<h5 class="item_price">￥388.00</h5>
 							</div>
 							<div class="rating">
 								<span>☆</span>
@@ -514,18 +446,18 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/products.jsp"><img src="${contextpath }/static/images/g9.png" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake8.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/single.jsp">SHOP NOW</a>
+							<a class="shop" href="${contextpath }/cake/single?cakeid=8">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
 					<div class="galy-info">
-						<p>Lorem Ipsum is simply</p>
+						<p>人生电影</p>
 						<div class="galry">
 							<div class="prices">
-								<h5 class="item_price">$95.00</h5>
+								<h5 class="item_price">￥256.00</h5>
 							</div>
 							<div class="rating">
 								<span>☆</span>
@@ -539,18 +471,18 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/products.jsp"><img src="${contextpath }/static/images/g10.png" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake10.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/single.jsp">SHOP NOW</a>
+							<a class="shop" href="${contextpath }/cake/single?cakeid=10">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
 					<div class="galy-info">
-						<p>Lorem Ipsum is simply</p>
+						<p>彩色的梦</p>
 						<div class="galry">
 							<div class="prices">
-								<h5 class="item_price">$95.00</h5>
+								<h5 class="item_price">￥374.00</h5>
 							</div>
 							<div class="rating">
 								<span>☆</span>

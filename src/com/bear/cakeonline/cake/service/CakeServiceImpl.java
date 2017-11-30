@@ -21,6 +21,10 @@ public class CakeServiceImpl {
 		return this.cakeDaoImpl.findAll();
 	}
 	
+	public Cake single(int id) {
+		return this.cakeDaoImpl.single(id);
+	}
+	
 	public void saveCake(Cake cake) {
 		this.cakeDaoImpl.saveCake(cake);
 	}
@@ -28,6 +32,7 @@ public class CakeServiceImpl {
 	public void deleteCake(int id) {
 		this.cakeDaoImpl.deleteCake(id);
 	}
+	
 	public void updateCake(Cake cake) {
 		this.cakeDaoImpl.updateCake(cake);
 	}

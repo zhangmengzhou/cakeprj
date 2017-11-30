@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bear.cakeonline.cakeType.service.CakeTypeServiceImpl;
 import com.bear.cakeonline.entity.CakeType;
@@ -25,7 +26,7 @@ public class CakeTypeController {
 	}
 	
 	@RequestMapping("/save")
-	public String save(String name){
+	public String save(@RequestParam String name){
 		CakeType cakeType = new CakeType();
 		cakeType.setName(name);
 		this.cakeTypeServiceImpl.saveCakeType(cakeType);
@@ -33,7 +34,7 @@ public class CakeTypeController {
 	}
 	
 	@RequestMapping("/update")
-	public String update(int id,String name){
+	public String update(@RequestParam int id,@RequestParam String name){
 		CakeType cakeType = new CakeType();
 		cakeType.setId(id);
 		cakeType.setName(name);
@@ -42,7 +43,7 @@ public class CakeTypeController {
 	}
 	
 	@RequestMapping("/delete")
-	public String delete(int id) {
+	public String delete(@RequestParam int id) {
 		this.cakeTypeServiceImpl.deleteCakeType(id);
 		return "";
 	}

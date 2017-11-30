@@ -293,31 +293,31 @@
 			<div class="register-but">
 				<form action="${contextpath }/user/update" method="post"> 
 					<div class="register-top-grid">
-						<h3>Personal information</h3>
+						<h3>个人信息</h3>
 						<div class="input">
-							<span>UserName<label>*</label></span>
+							<span>用户名<label>*</label></span>
 							<input type="text" name="username"/> 
 						</div>
 						<div class="input">
-							<span>Phone<label>*</label></span>
+							<span>电话<label>*</label></span>
 							<input type="text" name="phone"/> 
 						</div>
 						<div class="input">
-							<span>Address<label>*</label></span>
+							<span>地址<label>*</label></span>
 							<input type="text" name="address"/> 
 						</div>
 						
 						<div class="clearfix"> </div>
 					</div>
 				    <div class="register-bottom-grid">
-						<h3>Login information</h3>
+						<h3>登录信息</h3>
 						<div class="input">
-							<span>new Password<label>*</label></span>
+							<span>新密码<label>*</label></span>
 							<input type="password" name="password"/>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
-						<input type="submit" value="submit">
+						<input type="submit" value="修改">
 						<div class="clearfix"> </div>
 				</form>
 			</div>

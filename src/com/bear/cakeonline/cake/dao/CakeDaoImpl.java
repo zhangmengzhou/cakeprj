@@ -18,9 +18,15 @@ public class CakeDaoImpl {
 	@Resource
 	private SessionFactory sessionFactory;
 	
-	public List<Cake> findAll(){
+	public List<Cake> findAll() {
 		Query q=this.sessionFactory.getCurrentSession().createQuery("from Cake");
 		return q.list();
+	}
+	
+	public Cake single(int id) {
+		Query q=this.sessionFactory.getCurrentSession().createQuery("from Cake where id=?");
+		q.setParameter(0,id);
+		return (Cake)q.uniqueResult();
 	}
 	
 	public void saveCake(Cake cake) {
