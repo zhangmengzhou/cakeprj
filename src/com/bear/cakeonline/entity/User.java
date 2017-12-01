@@ -46,7 +46,7 @@ public class User {
 		this.address = address;
 	}
 	@OneToMany(mappedBy="user", targetEntity=Order.class, 
-	        cascade=CascadeType.ALL)
+	        cascade=CascadeType.MERGE)
 	public Set<Order> getOrders() {
 		return orders;
 	}

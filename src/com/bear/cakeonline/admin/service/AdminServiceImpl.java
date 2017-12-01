@@ -11,12 +11,12 @@ import com.bear.cakeonline.admin.dao.AdminDaoImpl;
 import com.bear.cakeonline.entity.Admin;
 
 @Service
-@Transactional(readOnly=true)
 public class AdminServiceImpl {
 
 	@Resource
 	private AdminDaoImpl adminDaoImpl;
 	
+	@Transactional(readOnly=true)
 	public List<Admin> listAll() {
 		return this.adminDaoImpl.findAll();
 	}

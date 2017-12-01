@@ -15,12 +15,12 @@ import com.bear.cakeonline.entity.Order;
 import com.bear.cakeonline.entity.User;
 
 @Service
-@Transactional(readOnly=true)
 public class UserServiceImpl {
 
 	@Resource
 	private UserDaoImpl userDaoImpl;
 	
+	@Transactional(readOnly=true)
 	public List<User> listAll() {
 		return this.userDaoImpl.findAll();
 	}

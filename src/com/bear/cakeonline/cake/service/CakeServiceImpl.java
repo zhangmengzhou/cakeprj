@@ -11,12 +11,12 @@ import com.bear.cakeonline.cake.dao.CakeDaoImpl;
 import com.bear.cakeonline.entity.Cake;
 
 @Service
-@Transactional(readOnly=true)
 public class CakeServiceImpl {
 
 	@Resource
 	private CakeDaoImpl cakeDaoImpl;
 	
+	@Transactional(readOnly=true)
 	public List<Cake> listCake(int page){
 		return this.cakeDaoImpl.findCake(page);
 	}
