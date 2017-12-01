@@ -17,8 +17,8 @@ public class CakeServiceImpl {
 	@Resource
 	private CakeDaoImpl cakeDaoImpl;
 	
-	public List<Cake> listAll(){
-		return this.cakeDaoImpl.findAll();
+	public List<Cake> listCake(int page){
+		return this.cakeDaoImpl.findCake(page);
 	}
 	
 	public Cake single(int id) {

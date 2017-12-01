@@ -331,6 +331,19 @@
 						</div>
 					</div>
 				</c:forEach>
+				<div>
+					<form method="POST" action="${contextpath }/cake/list" style="clear:left">
+			            <table border="0" align="center" >
+			                <tr>
+			                    <td>第${page }页&nbsp;&nbsp;共${totalpages }页<a href="${contextpath }/cake/list?page=1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首页</a></td>
+			                    <td><a href="${contextpath }/cake/list?page=${(page<=1)?page:(page-1) }">&nbsp;&nbsp;&nbsp;&nbsp;上一页</a></td>
+			                    <td><a href="${contextpath }/cake/list?page=${(page>=totalpages)?totalpages:(page+1) }">&nbsp;&nbsp;&nbsp;&nbsp;下一页</a></td>
+			                    <td><a href="${contextpath }/cake/list?page=${totalpages }">&nbsp;&nbsp;&nbsp;&nbsp;最后一页</a></td>
+			                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;转到第:<input type="text" name="page" size="2">页&nbsp;&nbsp;<input type="submit" value="GO" name="cndok"></td>
+			                </tr>
+			            </table> 
+	 				</form>
+ 				</div>
 			</div>	
 			<div class="col-md-3 rsidebar span_1_of_left">
 				<section  class="sky-form">

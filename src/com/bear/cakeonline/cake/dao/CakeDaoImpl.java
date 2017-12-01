@@ -11,6 +11,7 @@ import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
 import com.bear.cakeonline.entity.Cake;
+import com.bear.cakeonline.util.Page;
 
 @Repository
 public class CakeDaoImpl {
@@ -18,8 +19,18 @@ public class CakeDaoImpl {
 	@Resource
 	private SessionFactory sessionFactory;
 	
-	public List<Cake> findAll() {
-		Query q=this.sessionFactory.getCurrentSession().createQuery("from Cake");
+	public List<Cake> findCake(int page) {
+		Session session = sessionFactory.getCurrentSession();
+		String hql1 = "from Cake";
+		String hql2 = "select count(*)" + hql1;
+		Query q = session.createQuery(hql1);
+		q.setFirstResult((page-1)*6); 
+		q.setMaxResults(6);
+		long t = (long)(session.createQuery(hql2).uniqueResult());
+		if(t%6 == 0)
+			Page.totalpages = 6;
+		else
+			Page.totalpages = (int)t/6 + 1;
 		return q.list();
 	}
 	

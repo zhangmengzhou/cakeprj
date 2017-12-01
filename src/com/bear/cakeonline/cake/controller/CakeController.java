@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.bear.cakeonline.cake.service.CakeServiceImpl;
 import com.bear.cakeonline.entity.Cake;
 import com.bear.cakeonline.entity.CakeType;
+import com.bear.cakeonline.util.Page;
 
 @Controller
 @RequestMapping("cake")
@@ -21,47 +22,14 @@ public class CakeController {
 	@Resource
 	private CakeServiceImpl cakeServiceImpl;
 	
-	/*public PagerBean<ModelInfoDTO> findModelLabelAll_bak(PagerBean<ModelInfo> pager, String dataSource) {  
-        PagerBean<ModelInfoDTO> pagerDto = null;  
-        try {  
-            Session session = sessionFactory.getCurrentSession();  
-            StringBuffer sb = new StringBuffer();  
-            sb.append("select  m from ModelInfo m ");  
-            sb.append("where m.dataSource=? and m.modelStatus!=? and  m.modelName like " + pager.getParam().getModelName() + " order by m.createTime desc,m.modelName asc");  
-            String hql = sb.toString();  
-            //分页  
-            List<ModelInfo> lists = (List<ModelInfo>) session.createQuery(hql)  
-                    .setParameter(0, dataSource)  
-                    .setParameter(1, Constants.MODEL_STATUS_DELETE)  
-                    .setFirstResult((pager.getPage() - 1) * pager.getPageSize()).setMaxResults(pager.getPageSize())  
-                    .list();  
-            //查询总数  
-            List<ModelInfo> totals = (List<ModelInfo>) session.createQuery(hql)  
-                    .setParameter(0, dataSource)  
-                    .setParameter(1, Constants.MODEL_STATUS_DELETE)  
-                    .list();  
-  
-            //封装页面数据参数  
-            List<ModelInfoDTO> rows = getResultModelInfo(lists);  
-            pagerDto = new PagerBean<ModelInfoDTO>();  
-            pagerDto.setPage(pager.getPage());  
-            pagerDto.setPageSize(pager.getPageSize());  
-            pagerDto.setOrder(pager.getOrder());  
-            pagerDto.setSort(pager.getSort());  
-  
-            pagerDto.setTotal(totals.size());  
-            pagerDto.setRows(rows);  
-        } catch (Exception e) {  
-            e.printStackTrace();  
-        }  
-  
-        return pagerDto;  
-    }  */
-	
 	@RequestMapping("/list")
-	public String list(Model model){
-		List<Cake> list=this.cakeServiceImpl.listAll();
+	public String list(Model model,@RequestParam(required=false) String page){
+		if(page == null)
+			page = "1";
+		List<Cake> list=this.cakeServiceImpl.listCake(Integer.parseInt(page));
 		model.addAttribute("cakelist", list);
+		model.addAttribute("page", Integer.parseInt(page));
+		model.addAttribute("totalpages", Page.totalpages);
 		return "products";
 	}
 	
