@@ -47,43 +47,43 @@
 									<div class="col-sm-3">
 										<h4>按对象</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/cake/list">送朋友</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">送恋人</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">送长辈</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">送领导</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">送客户</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">送儿童</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value2=朋友">送朋友</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value2=恋人">送恋人</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value2=长辈">送长辈</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value2=领导">送领导</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value2=客户">送客户</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value2=儿童">送儿童</a></li>
 										</ul>
 									</div>																		
 									<div class="col-sm-3">
 										<h4>按材料</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/cake/list">巧克力蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">欧式水果蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">奶油蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">慕斯蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">彩虹蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value3=巧克力">巧克力蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value3=水果">欧式水果蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value3=奶油">奶油蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value3=慕斯">慕斯蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value3=彩虹">彩虹蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
 										<h4>按造型</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/cake/list">心形蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">圆形蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">方形蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">生肖蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">多层蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">艺术蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value4=心形">心形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value4=圆形">圆形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value4=方形">方形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value4=生肖">生肖蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value4=层">多层蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value4=艺术">艺术蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
 										<h4>按价格</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/cake/list">0-100</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">100-300</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">300-600</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">600-1000</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">1000-10000</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&price1=0&price2=200">0-200</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&price1=200&price2=400">200-400</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&price1=400&price2=600">400-600</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&price1=600&price2=1000">600-1000</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&price1=1000&price2=10000">1000-10000</a></li>
 										</ul>
 									</div>
 								</div>
@@ -96,32 +96,32 @@
 									<div class="col-sm-3">
 										<h4>按材料</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/cake/list">巧克力蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">欧式水果蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">奶油蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">慕斯蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">彩虹蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value3=巧克力">巧克力蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value3=水果">欧式水果蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value3=奶油">奶油蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value3=慕斯">慕斯蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value3=彩虹">彩虹蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
 										<h4>按造型</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/cake/list">心形蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">圆形蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">方形蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">生肖蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">多层蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">艺术蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value4=心形">心形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value4=圆形">圆形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value4=方形">方形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value4=生肖">生肖蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value4=层">多层蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value4=艺术">艺术蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
 										<h4>按价格</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/cake/list">0-100</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">100-300</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">300-600</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">600-1000</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">1000-10000</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&price1=0&price2=200">0-200</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&price1=200&price2=400">200-400</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&price1=400&price2=600">400-600</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&price1=600&price2=1000">600-1000</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&price1=1000&price2=10000">1000-10000</a></li>
 										</ul>
 									</div>
 								</div>
@@ -134,38 +134,38 @@
 									<div class="col-sm-3">
 										<h4>按材料</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/cake/list">巧克力蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">欧式水果蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">奶油蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">慕斯蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">彩虹蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value3=巧克力">巧克力蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value3=水果">欧式水果蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value3=奶油">奶油蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value3=慕斯">慕斯蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value3=彩虹">彩虹蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
 										<h4>按造型</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/cake/list">心形蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">圆形蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">方形蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">生肖蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">多层蛋糕</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">艺术蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value4=心形">心形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value4=圆形">圆形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value4=方形">方形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value4=生肖">生肖蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value4=层">多层蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value4=艺术">艺术蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
 										<h4>按价格</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="${contextpath }/cake/list">0-100</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">100-300</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">300-600</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">600-1000</a></li>
-											<li><a class="list" href="${contextpath }/cake/list">1000-10000</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&price1=0&price2=200">0-200</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&price1=200&price2=400">200-400</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&price1=400&price2=600">400-600</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&price1=600&price2=1000">600-1000</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&price1=1000&price2=10000">1000-10000</a></li>
 										</ul>
 									</div>
 								</div>
 							</ul>
 						</li>				
-					</ul> 
+					</ul>
 					<!--/.navbar-collapse-->
 				</div>
 				<!--//navbar-header-->
@@ -174,8 +174,8 @@
 				<div class="header-right search-box">
 					<a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>				
 					<div class="search">
-						<form class="navbar-form" action="">
-							<input type="text" class="form-control" name="search" >
+						<form class="navbar-form" action="${contextpath }/cake/list.do">
+							<input type="text" class="form-control" name="value" >
 							<button type="submit" class="btn btn-default" aria-label="Left Align">
 								搜索
 							</button>
@@ -185,16 +185,16 @@
 				<div class="header-right login">
 					<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
 					<div id="loginBox">        
-						<c:if test="${username != null }">
+						<c:if test="${user.username != null }">
 							<form id="loginForm">
 							<br>
-							<h3>欢迎您，<a class="sign" href="#">${username }</a>！<span><a href="${contextpath }/user/loginout">注销</a></span></h3>
+							<h3>欢迎您，<a class="sign" href="#">${user.username }</a>！<span><a href="${contextpath }/user/loginout.do">注销</a></span></h3>
 							<br>
 							<h4><span><a href="${contextpath }/information.jsp">修改个人信息</a></span></h4>
 							</form>
 						</c:if>
-						<c:if test="${username == null }">
-							<form id="loginForm" action="${contextpath }/user/login" method="post">
+						<c:if test="${user.username == null }">
+							<form id="loginForm" action="${contextpath }/user/login.do" method="post">
 								<fieldset id="body">
 								<h4>${fails }</h4>
 									<fieldset>
@@ -234,7 +234,7 @@
 		<div class="container">
 			<h2 class="hdng">Yummy <span>Cakes</span> for u</h2>
 			<p>Our best cakes make your day special</p>
-			<a href="${contextpath }/cake/list">逛一逛</a>
+			<a href="${contextpath }/cake/list.do">逛一逛</a>
 			<div class="banner-text">			
 				<img src="${contextpath }/static/images/2.png" alt=""/>	
 			</div>
@@ -249,7 +249,7 @@
 					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/g1.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/cake/single?cakeid=19">查看</a>
+							<a class="shop" href="${contextpath }/cake/single.do?cakeid=19">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
@@ -271,10 +271,10 @@
 					</div>
 				</div>
 				<div class="col-md-4 gallery-grid glry-two">
-					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/g2.jpg" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list.do"><img src="${contextpath }/static/images/g2.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info galrr-info-two">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/cake/single?cakeid=20">查看</a>
+							<a class="shop" href="${contextpath }/cake/single.do?cakeid=20">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
@@ -296,10 +296,10 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake1.jpg" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list.do"><img src="${contextpath }/static/images/cake1.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/cake/single?cakeid=1">查看</a>
+							<a class="shop" href="${contextpath }/cake/single.do?cakeid=1">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
@@ -321,10 +321,10 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake6.jpg" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list.do"><img src="${contextpath }/static/images/cake6.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/cake/single?cakeid=6">查看</a>
+							<a class="shop" href="${contextpath }/cake/single.do?cakeid=6">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
@@ -346,10 +346,10 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake9.jpg" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list.do"><img src="${contextpath }/static/images/cake9.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/cake/single?cakeid=9">查看</a>
+							<a class="shop" href="${contextpath }/cake/single.do?cakeid=9">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
@@ -371,10 +371,10 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake13.jpg" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list.do"><img src="${contextpath }/static/images/cake13.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/cake/single?cakeid=13">查看</a>
+							<a class="shop" href="${contextpath }/cake/single.do?cakeid=13">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
@@ -396,10 +396,10 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake2.jpg" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list.do"><img src="${contextpath }/static/images/cake2.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/cake/single?cakeid=2">查看</a>
+							<a class="shop" href="${contextpath }/cake/single.do?cakeid=2">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
@@ -421,10 +421,10 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake7.jpg" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list.do"><img src="${contextpath }/static/images/cake7.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/cake/single?cakeid=7">查看</a>
+							<a class="shop" href="${contextpath }/cake/single.do?cakeid=7">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
@@ -446,10 +446,10 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid ">
-					<a href="${contextpath }/cake/list"><img src="${contextpath }/static/images/cake8.jpg" class="img-responsive" alt=""/>
+					<a href="${contextpath }/cake/list.do"><img src="${contextpath }/static/images/cake8.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 							<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
-							<a class="shop" href="${contextpath }/cake/single?cakeid=8">查看</a>
+							<a class="shop" href="${contextpath }/cake/single.do?cakeid=8">查看</a>
 							<div class="clearfix"> </div>
 						</div>
 					</a>
@@ -517,7 +517,7 @@
 				<div class="col-md-2 footer-grid">
 					<h4>company</h4>
 					<ul>
-						<li><a href="${contextpath }/products.jsp">products</a></li>
+						<li><a href="${contextpath }/cake.list.do">products</a></li>
 						<li><a href="#">Work Here</a></li>
 						<li><a href="#">Team</a></li>
 						<li><a href="#">Happenings</a></li>

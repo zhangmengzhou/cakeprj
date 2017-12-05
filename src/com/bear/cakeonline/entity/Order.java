@@ -11,7 +11,7 @@ public class Order {
 	private int id;
 	private User user;
 	private Date odate;            //下单时间
-	private int status;            //订单状态  0未处理   1已处理    2用户退订
+	private int status;            //订单状态  0未处理   1已处理
 	private Set<OrderDetail> orderDetails;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

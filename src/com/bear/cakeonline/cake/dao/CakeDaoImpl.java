@@ -19,16 +19,52 @@ public class CakeDaoImpl {
 	@Resource
 	private SessionFactory sessionFactory;
 	
-	public List<Cake> findCake(int page) {
+	public List<Cake> findCake(int page,String value,String value1,String value2,String value3,String value4,String price1,String price2) {
 		Session session = sessionFactory.getCurrentSession();
 		String hql1 = "from Cake";
+		if(value != null && !"".equals(value)) {
+			hql1 = hql1 + " where name like '%" + value + "%' or description like '%" + value + "%'";
+		}
+		if(value1 != null && !"".equals(value1)) {
+			if(hql1.equals("from Cake"))
+				hql1 = hql1 + " where description like '%" + value1 + "%'";
+			else
+				hql1 = hql1 + " and description like '%" + value1 + "%'";
+		}	
+		if(value2 != null && !"".equals(value2)) {
+			if(hql1.equals("from Cake"))
+				hql1 = hql1 + " where description like '%" + value2 + "%'";
+			else
+				hql1 = hql1 + " and description like '%" + value2 + "%'";
+		}
+		if(value3 != null && !"".equals(value3)) {
+			if(hql1.equals("from Cake"))
+				hql1 = hql1 + " where description like '%" + value3 + "%'";
+			else
+				hql1 = hql1 + " and description like '%" + value3 + "%'";
+		}
+		if(value4 != null && !"".equals(value4)) {
+			if(hql1.equals("from Cake"))
+				hql1 = hql1 + " where description like '%" + value4 + "%'";
+			else
+				hql1 = hql1 + " and description like '%" + value4 + "%'";
+		}
+		if(price1 != null && price2 != null && !"".equals(price1) && !"".equals(price2)) {
+			if(hql1.equals("from Cake")) {
+				hql1 = hql1 + " where discountprice between " + price1 + " and " + price2;
+			}else {
+				hql1 = hql1 + " and discountprice between " + price1 + " and " + price2;
+			}
+		}
 		String hql2 = "select count(*)" + hql1;
 		Query q = session.createQuery(hql1);
 		q.setFirstResult((page-1)*6); 
 		q.setMaxResults(6);
 		long t = (long)(session.createQuery(hql2).uniqueResult());
-		if(t%6 == 0)
-			Page.totalpages = 6;
+		if(t == 0)
+			Page.totalpages = 0;
+		else if(t%6 == 0)
+			Page.totalpages = (int)t/6;
 		else
 			Page.totalpages = (int)t/6 + 1;
 		return q.list();

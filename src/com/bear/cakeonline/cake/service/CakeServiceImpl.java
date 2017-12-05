@@ -17,8 +17,8 @@ public class CakeServiceImpl {
 	private CakeDaoImpl cakeDaoImpl;
 	
 	@Transactional(readOnly=true)
-	public List<Cake> listCake(int page){
-		return this.cakeDaoImpl.findCake(page);
+	public List<Cake> listCake(int page,String value,String value1,String value2,String value3,String value4,String price1,String price2){
+		return this.cakeDaoImpl.findCake(page,value,value1,value2,value3,value4,price1,price2);
 	}
 	
 	public Cake single(int id) {

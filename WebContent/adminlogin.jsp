@@ -16,7 +16,7 @@
 <body>
 
 <div class="login">
-<form action="admin/login" method="post" id="form">
+<form action="admin/login.do" method="post" id="form">
 	<div class="logo"></div>
     <div class="login_form">
     	<div class="user">

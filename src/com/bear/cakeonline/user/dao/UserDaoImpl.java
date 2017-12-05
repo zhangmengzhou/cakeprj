@@ -39,7 +39,7 @@ public class UserDaoImpl {
 		tx.commit();
 	}
 	
-	public void deleteUser(String username) {
+	public boolean deleteUser(String username) {
 		Session session = sessionFactory.getCurrentSession();
 		Transaction tx = session.beginTransaction();
 		String hql = "delete from User where username=?";
@@ -47,9 +47,13 @@ public class UserDaoImpl {
 		q.setParameter(0,username);
 		int ret = q.executeUpdate();
 		tx.commit();
+		if(ret != 0)
+			return true;
+		else
+			return false;
 	}
 	
-	public void updateUser(User user) {
+	public boolean updateUser(User user) {
 		Session session = sessionFactory.getCurrentSession();
 		Transaction tx = session.beginTransaction();
 		String hql="update User set password=?,phone=?,address=? where username=?";
@@ -60,5 +64,9 @@ public class UserDaoImpl {
 		q.setParameter(3,user.getUsername());
 		int ret=q.executeUpdate();
 		tx.commit();
+		if(ret != 0)
+			return true;
+		else
+			return false;
 	}
 }

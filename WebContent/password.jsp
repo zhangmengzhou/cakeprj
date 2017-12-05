@@ -34,205 +34,137 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<h1 class="navbar-brand"><a  href="index.jsp">Yummy</a></h1>
+					<h1 class="navbar-brand"><a  href="${contextpath }/index.jsp">Yummy</a></h1>
 				</div>
 				<!--navbar-header-->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a href="index.jsp" class="active">Home</a></li>
+						<li><a href="${contextpath }/index.jsp" class="active">首页</a></li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Birthday<b class="caret"></b></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">生日蛋糕<b class="caret"></b></a>
 							<ul class="dropdown-menu multi-column columns-4">
 								<div class="row">
 									<div class="col-sm-3">
-										<h4>By Relation</h4>
+										<h4>按对象</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Friend</a></li>
-											<li><a class="list" href="products.jsp">Lover</a></li>
-											<li><a class="list" href="products.jsp">Sister</a></li>
-											<li><a class="list" href="products.jsp">Brother</a></li>
-											<li><a class="list" href="products.jsp">Kids</a></li>
-											<li><a class="list" href="products.jsp">Parents</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value2=朋友">送朋友</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value2=恋人">送恋人</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value2=长辈">送长辈</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value2=领导">送领导</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value2=客户">送客户</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value2=儿童">送儿童</a></li>
 										</ul>
 									</div>																		
 									<div class="col-sm-3">
-										<h4>By Flavour</h4>
+										<h4>按材料</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Chocolate</a></li>
-											<li><a class="list" href="products.jsp">Mixed Fruit</a></li>
-											<li><a class="list" href="products.jsp">Butterscotch</a></li>
-											<li><a class="list" href="products.jsp">Strawberry</a></li>
-											<li><a class="list" href="products.jsp">Vanilla</a></li>
-											<li><a class="list" href="products.jsp">Eggless Cakes</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value3=巧克力">巧克力蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value3=水果">欧式水果蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value3=奶油">奶油蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value3=慕斯">慕斯蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value3=彩虹">彩虹蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
-										<h4>By Theme</h4>
+										<h4>按造型</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Heart shaped</a></li>
-											<li><a class="list" href="products.jsp">Cartoon Cakes</a></li>
-											<li><a class="list" href="products.jsp">2-3 Tier Cakes</a></li>
-											<li><a class="list" href="products.jsp">Square shape</a></li>
-											<li><a class="list" href="products.jsp">Round shape</a></li>
-											<li><a class="list" href="products.jsp">Photo cakes</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value4=心形">心形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value4=圆形">圆形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value4=方形">方形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value4=生肖">生肖蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value4=层">多层蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&value4=艺术">艺术蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
-										<h4>Weight</h4>
+										<h4>按价格</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">1 kG</a></li>
-											<li><a class="list" href="products.jsp">1.5 kG</a></li>
-											<li><a class="list" href="products.jsp">2 kG</a></li>
-											<li><a class="list" href="products.jsp">3 kG</a></li>
-											<li><a class="list" href="products.jsp">4 kG</a></li>
-											<li><a class="list" href="products.jsp">Large</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&price1=0&price2=200">0-200</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&price1=200&price2=400">200-400</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&price1=400&price2=600">400-600</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&price1=600&price2=1000">600-1000</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=生日&price1=1000&price2=10000">1000-10000</a></li>
 										</ul>
 									</div>
 								</div>
 							</ul>
 						</li>
 					   <li class="dropdown grid">
-							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown">Wedding<b class="caret"></b></a>
+							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown">爱情蛋糕<b class="caret"></b></a>
 							<ul class="dropdown-menu multi-column columns-4">
-								<div class="row">
+								<div class="row">																	
 									<div class="col-sm-3">
-										<h4>By Relation</h4>
+										<h4>按材料</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Friend</a></li>
-											<li><a class="list" href="products.jsp">Lover</a></li>
-											<li><a class="list" href="products.jsp">Sister</a></li>
-											<li><a class="list" href="products.jsp">Brother</a></li>
-											<li><a class="list" href="products.jsp">Kids</a></li>
-											<li><a class="list" href="products.jsp">Parents</a></li>
-										</ul>
-									</div>																		
-									<div class="col-sm-3">
-										<h4>By Flavour</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Chocolate</a></li>
-											<li><a class="list" href="products.jsp">Mixed Fruit</a></li>
-											<li><a class="list" href="products.jsp">Butterscotch</a></li>
-											<li><a class="list" href="products.jsp">Strawberry</a></li>
-											<li><a class="list" href="products.jsp">Vanilla</a></li>
-											<li><a class="list" href="products.jsp">Eggless Cakes</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value3=巧克力">巧克力蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value3=水果">欧式水果蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value3=奶油">奶油蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value3=慕斯">慕斯蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value3=彩虹">彩虹蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
-										<h4>By Theme</h4>
+										<h4>按造型</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Heart shaped</a></li>
-											<li><a class="list" href="products.jsp">Cartoon Cakes</a></li>
-											<li><a class="list" href="products.jsp">2-3 Tier Cakes</a></li>
-											<li><a class="list" href="products.jsp">Square shape</a></li>
-											<li><a class="list" href="products.jsp">Round shape</a></li>
-											<li><a class="list" href="products.jsp">Photo cakes</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value4=心形">心形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value4=圆形">圆形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value4=方形">方形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value4=生肖">生肖蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value4=层">多层蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&value4=艺术">艺术蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
-										<h4>Weight</h4>
+										<h4>按价格</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">1 kG</a></li>
-											<li><a class="list" href="products.jsp">1.5 kG</a></li>
-											<li><a class="list" href="products.jsp">2 kG</a></li>
-											<li><a class="list" href="products.jsp">3 kG</a></li>
-											<li><a class="list" href="products.jsp">4 kG</a></li>
-											<li><a class="list" href="products.jsp">Large</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&price1=0&price2=200">0-200</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&price1=200&price2=400">200-400</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&price1=400&price2=600">400-600</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&price1=600&price2=1000">600-1000</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=爱情&price1=1000&price2=10000">1000-10000</a></li>
 										</ul>
 									</div>
 								</div>
 							</ul>
 						</li>				
 						<li class="dropdown grid">
-							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown">Special Offers <b class="caret"></b></a>
+							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown">婚礼蛋糕<b class="caret"></b></a>
 							<ul class="dropdown-menu multi-column columns-4">
-								<div class="row">
+								<div class="row">																
 									<div class="col-sm-3">
-										<h4>By Relation</h4>
+										<h4>按材料</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Friend</a></li>
-											<li><a class="list" href="products.jsp">Lover</a></li>
-											<li><a class="list" href="products.jsp">Sister</a></li>
-											<li><a class="list" href="products.jsp">Brother</a></li>
-											<li><a class="list" href="products.jsp">Kids</a></li>
-											<li><a class="list" href="products.jsp">Parents</a></li>
-										</ul>
-									</div>																		
-									<div class="col-sm-3">
-										<h4>By Flavour</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Chocolate</a></li>
-											<li><a class="list" href="products.jsp">Mixed Fruit</a></li>
-											<li><a class="list" href="products.jsp">Butterscotch</a></li>
-											<li><a class="list" href="products.jsp">Strawberry</a></li>
-											<li><a class="list" href="products.jsp">Vanilla</a></li>
-											<li><a class="list" href="products.jsp">Eggless Cakes</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value3=巧克力">巧克力蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value3=水果">欧式水果蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value3=奶油">奶油蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value3=慕斯">慕斯蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value3=彩虹">彩虹蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
-										<h4>By Theme</h4>
+										<h4>按造型</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Heart shaped</a></li>
-											<li><a class="list" href="products.jsp">Cartoon Cakes</a></li>
-											<li><a class="list" href="products.jsp">2-3 Tier Cakes</a></li>
-											<li><a class="list" href="products.jsp">Square shape</a></li>
-											<li><a class="list" href="products.jsp">Round shape</a></li>
-											<li><a class="list" href="products.jsp">Photo cakes</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value4=心形">心形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value4=圆形">圆形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value4=方形">方形蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value4=生肖">生肖蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value4=层">多层蛋糕</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&value4=艺术">艺术蛋糕</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3">
-										<h4>Weight</h4>
+										<h4>按价格</h4>
 										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">1 kG</a></li>
-											<li><a class="list" href="products.jsp">1.5 kG</a></li>
-											<li><a class="list" href="products.jsp">2 kG</a></li>
-											<li><a class="list" href="products.jsp">3 kG</a></li>
-											<li><a class="list" href="products.jsp">4 kG</a></li>
-											<li><a class="list" href="products.jsp">Large</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&price1=0&price2=200">0-200</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&price1=200&price2=400">200-400</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&price1=400&price2=600">400-600</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&price1=600&price2=1000">600-1000</a></li>
+											<li><a class="list" href="${contextpath }/cake/list.do?value1=婚礼&price1=1000&price2=10000">1000-10000</a></li>
 										</ul>
 									</div>
 								</div>
 							</ul>
-						</li>
-						<li class="dropdown grid">
-							<a href="#" class="dropdown-toggle list1" data-toggle="dropdown">Store<b class="caret"></b></a>
-							<ul class="dropdown-menu multi-column columns-3">
-								<div class="row">
-									<div class="col-sm-4">
-										<h4>By Relation</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Friend</a></li>
-											<li><a class="list" href="products.jsp">Lover</a></li>
-											<li><a class="list" href="products.jsp">Sister</a></li>
-											<li><a class="list" href="products.jsp">Brother</a></li>
-											<li><a class="list" href="products.jsp">Kids</a></li>
-											<li><a class="list" href="products.jsp">Parents</a></li>
-										</ul>
-									</div>																		
-									<div class="col-sm-4">
-										<h4>By Flavour</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Chocolate</a></li>
-											<li><a class="list" href="products.jsp">Mixed Fruit</a></li>
-											<li><a class="list" href="products.jsp">Butterscotch</a></li>
-											<li><a class="list" href="products.jsp">Strawberry</a></li>
-											<li><a class="list" href="products.jsp">Vanilla</a></li>
-											<li><a class="list" href="products.jsp">Eggless Cakes</a></li>
-										</ul>
-									</div>								
-									<div class="col-sm-4">
-										<h4>Specials</h4>
-										<ul class="multi-column-dropdown">
-											<li><a class="list" href="products.jsp">Ice cream cake</a></li>
-											<li><a class="list" href="products.jsp">Swiss roll</a></li>
-											<li><a class="list" href="products.jsp">Ruske kape</a></li>
-											<li><a class="list" href="products.jsp">Cupcakes</a></li>
-											<li><a class="list" href="products.jsp">Muffin</a></li>
-											<li><a class="list" href="products.jsp">Merveilleux</a></li>										
-										</ul>
-									</div>
-								</div>
-							</ul>
-						</li>								
+						</li>				
 					</ul> 
 					<!--/.navbar-collapse-->
 				</div>
@@ -242,32 +174,43 @@
 				<div class="header-right search-box">
 					<a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>				
 					<div class="search">
-						<form class="navbar-form">
-							<input type="text" class="form-control">
+						<form class="navbar-form" action="${contextpath }/cake/list.do">
+							<input type="text" class="form-control" name="value" >
 							<button type="submit" class="btn btn-default" aria-label="Left Align">
-								Search
+								搜索
 							</button>
 						</form>
 					</div>	
 				</div>
 				<div class="header-right login">
 					<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-					<div id="loginBox">                
-						<form id="loginForm">
-							<fieldset id="body">
-								<fieldset>
-									<label for="email">Username</label>
-									<input type="text" name="username" id="email">
+					<div id="loginBox">        
+						<c:if test="${user.username != null }">
+							<form id="loginForm">
+							<br>
+							<h3>欢迎您，<a class="sign" href="#">${user.username }</a>！<span><a href="${contextpath }/user/loginout.do">注销</a></span></h3>
+							<br>
+							<h4><span><a href="${contextpath }/information.jsp">修改个人信息</a></span></h4>
+							</form>
+						</c:if>
+						<c:if test="${user.username == null }">
+							<form id="loginForm" action="${contextpath }/user/login.do" method="post">
+								<fieldset id="body">
+								<h4>${fails }</h4>
+									<fieldset>
+										<label for="email">用户名</label>
+										<input type="text" name="username" id="email">
+									</fieldset>
+									<fieldset>
+										<label for="password">密码</label>
+										<input type="password" name="password" id="password">
+									</fieldset>
+									<input type="submit" id="login" value="登录">
+									<label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住我</i></label>
 								</fieldset>
-								<fieldset>
-									<label for="password">Password</label>
-									<input type="password" name="password" id="password">
-								</fieldset>
-								<input type="submit" id="login" value="Sign in">
-								<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
-							</fieldset>
-							<p>New User ? <a class="sign" href="account.jsp">Sign Up</a> <span><a href="#">Forgot your password?</a></span></p>
-						</form>
+								<p>新用户 ? <a class="sign" href="${contextpath }/account.jsp">注册</a> <span><a class="sign" href="${contextpath }/password.jsp">忘记密码?</a><a href="${contextpath }/adminlogin.jsp">店长登录</a></span></p>
+							</form>
+						</c:if>
 					</div>
 				</div>
 				<div class="header-right cart">
@@ -276,7 +219,7 @@
 						<h4><a href="checkout.jsp">
 							<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>) 
 						</a></h4>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
+						<p><a href="javascript:;" class="simpleCart_empty">清空购物车</a></p>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -291,8 +234,9 @@
 		<div class="container">
 			<div class="register">
 			<div class="register-but">
-				<form action="${contextpath }/user/newpwd" method="post"> 
+				<form action="${contextpath }/user/newpwd.do" method="post"> 
 					<div class="register-top-grid">
+						<h3>${information }</h3>
 						<h3>验证个人信息</h3>
 						<div class="input">
 							<span>用户名<label>*</label></span>
@@ -380,7 +324,7 @@
 	<!--footer-->
 	<div class="footer-bottom">
 		<div class="container">
-			<p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://www.17sucai.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+			<p>Copyright &copy; 2015.Company name All rights reserved.</p>
 		</div>
 	</div>
 </body>

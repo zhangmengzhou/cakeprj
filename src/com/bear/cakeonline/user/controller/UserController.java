@@ -3,6 +3,7 @@ package com.bear.cakeonline.user.controller;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,20 +35,25 @@ public class UserController {
 		user.setPhone(phone);
 		user.setAddress(address);
 		userServiceImpl.saveUser(user);
-		model.addAttribute("username",username);
-		return "index";
+		model.addAttribute("information","注册成功！");
+		return "account";
 	}
 	
 	@RequestMapping("/update")
-	public String update(Model model,@RequestParam String username,@RequestParam String password,@RequestParam String phone,@RequestParam String address) {
+	public String update(HttpServletRequest request,Model model,@RequestParam String username,@RequestParam String password,@RequestParam String phone,@RequestParam String address) {
 		User user = new User();
 		user.setUsername(username);
 		user.setPassword(password);
 		user.setPhone(phone);
 		user.setAddress(address);
-		userServiceImpl.updateUser(user);
-		model.addAttribute("username",username);
-		return "index";
+		if(userServiceImpl.updateUser(user)) {
+			model.addAttribute("information","修改成功！请重新登录");
+			request.getSession().removeAttribute("user");
+			return "information";
+		}else {
+			model.addAttribute("information","修改失败！");
+			return "information";
+		}
 	}
 	
 	@RequestMapping("/newpwd")
@@ -60,20 +66,22 @@ public class UserController {
 				user.setPassword(password);
 				user.setPhone(phone);
 				user.setAddress(address);
-				userServiceImpl.updateUser(user);
-				model.addAttribute("username",username);
-				break;
+				if(userServiceImpl.updateUser(user)) {
+					model.addAttribute("information","修改成功！");
+					return "password";
+				}
 			}
 		}
-		return "index";
+		model.addAttribute("information","修改失败！");
+		return "password";
 	}
 	
 	@RequestMapping("/login")
-	public String login(Model model,@RequestParam String username,@RequestParam String password) {
+	public String login(HttpServletRequest request,Model model,@RequestParam String username,@RequestParam String password) {
 		List<User> list=this.userServiceImpl.listAll();
 		for(int i = 0;i < list.size();i++) {
 			if(list.get(i).getUsername().equals(username) && list.get(i).getPassword().equals(password)) {
-				model.addAttribute("username",username);
+				request.getSession().setAttribute("user",list.get(i));
 				break;
 			}
 		}
@@ -82,8 +90,8 @@ public class UserController {
 	}
 	
 	@RequestMapping("/loginout")
-	public String loginout(Model model) {
-		model.addAttribute("username",null);
+	public String loginout(HttpServletRequest request) {
+		request.getSession().removeAttribute("user");
 		return "index";
 	}
 	

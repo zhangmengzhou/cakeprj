@@ -13,6 +13,7 @@ public class User {
 	private String phone;
 	private String address;
 	private Set<Order> orders;
+	private Cart cart;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY) 
 	public int getId() {
@@ -52,5 +53,13 @@ public class User {
 	}
 	public void setOrders(Set<Order> orders) {
 		this.orders = orders;
+	}
+	@OneToOne()
+	@JoinColumn(name="cartid") 
+	public Cart getCart() {
+		return cart;
+	}
+	public void setCart(Cart cart) {
+		this.cart = cart;
 	}
 }

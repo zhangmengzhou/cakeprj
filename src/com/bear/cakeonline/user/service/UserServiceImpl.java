@@ -33,11 +33,17 @@ public class UserServiceImpl {
 		userDaoImpl.saveUser(user);
 	}
 	
-	public void deleteUser(String username) {
-		userDaoImpl.deleteUser(username);
+	public boolean deleteUser(String username) {
+		if(userDaoImpl.deleteUser(username))
+			return true;
+		else
+			return false;
 	}
 	
-	public void updateUser(User user) {
-		userDaoImpl.updateUser(user);
+	public boolean updateUser(User user) {
+		if(userDaoImpl.updateUser(user))
+			return true;
+		else
+			return false;
 	}
 }
