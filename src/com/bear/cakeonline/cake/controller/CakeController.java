@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,21 +25,22 @@ public class CakeController {
 	private CakeServiceImpl cakeServiceImpl;
 	
 	@RequestMapping("/list")
-	public String list(Model model,@RequestParam(required=false) String page,@RequestParam(required=false) String value,@RequestParam(required=false) String value1,@RequestParam(required=false) String value2,
+	public String list(HttpServletRequest request,@RequestParam(required=false) String page,@RequestParam(required=false) String value,@RequestParam(required=false) String value1,@RequestParam(required=false) String value2,
 			@RequestParam(required=false) String value3,@RequestParam(required=false) String value4,@RequestParam(required=false) String price1,@RequestParam(required=false) String price2){
+		HttpSession session = request.getSession();
 		if(page == null)
 			page = "1";
 		List<Cake> list=this.cakeServiceImpl.listCake(Integer.parseInt(page),value,value1,value2,value3,value4,price1,price2);
-		model.addAttribute("cakelist", list);
-		model.addAttribute("page", Integer.parseInt(page));
-		model.addAttribute("totalpages", Page.totalpages);
-		model.addAttribute("value",value);
-		model.addAttribute("value1",value1);
-		model.addAttribute("value2",value2);
-		model.addAttribute("value3",value3);
-		model.addAttribute("value4",value4);
-		model.addAttribute("price1",price1);
-		model.addAttribute("price2",price2);
+		session.setAttribute("cakelist", list);
+		session.setAttribute("page", Integer.parseInt(page));
+		session.setAttribute("totalpages", Page.totalpages);
+		session.setAttribute("value",value);
+		session.setAttribute("value1",value1);
+		session.setAttribute("value2",value2);
+		session.setAttribute("value3",value3);
+		session.setAttribute("value4",value4);
+		session.setAttribute("price1",price1);
+		session.setAttribute("price2",price2);
 		return "products";
 	}
 	

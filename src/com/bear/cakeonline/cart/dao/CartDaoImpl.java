@@ -1,5 +1,13 @@
 package com.bear.cakeonline.cart.dao;
 
-public class CartDaoImpl {
+import javax.annotation.Resource;
 
+import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class CartDaoImpl {
+	@Resource
+	private SessionFactory sessionFactory;
+	
 }

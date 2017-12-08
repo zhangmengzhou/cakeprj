@@ -16,7 +16,7 @@
 <body>
 
 <div class="login">
-<form action="admin/login.do" method="post" id="form">
+<form action="${contextpath }/admin/login.do" method="post" id="form">
 	<div class="logo"></div>
     <div class="login_form">
     	<div class="user">
@@ -25,7 +25,7 @@
         </div>
         <button class="button" id="submit" type="submit">登录</button>
     </div>
-    <div id="tip"></div>
+    <div id="tip">${fails }</div>
     <div class="foot">
 	Copyright &copy; 2014.Company name All rights reserved.
     </div>

@@ -230,10 +230,8 @@
 				<div class="header-right cart">
 					<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 					<div class="cart-box">
-						<h4><a href="checkout.jsp">
-							<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>) 
-						</a></h4>
-						<p><a href="javascript:;" class="simpleCart_empty">清空购物车</a></p>
+						<p><a href="${contextpath }/cartiteam/show.do?cartid=${user.cart.cartid}" >查看购物车</a></p>
+						<p><a href="${contextpath }/order/show.do?userid=${user.id }" >查看订单</a></p>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -293,7 +291,7 @@
 					</div>
 					<p class="qty"> Qty :  </p><input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
 					<div class="btn_form">
-						<a href="#" class="add-cart item_add">添加购物车</a>	
+						<a href="${contextpath }/cartiteam/save.do?cartid=${user.cart.cartid }&cakeid=${cake.id}" class="add-cart item_add">添加购物车</a>	
 					</div>
 					<div class="tag">
 						<p>种类 : <a href="#">${cake.cakeType.name }</a></p>

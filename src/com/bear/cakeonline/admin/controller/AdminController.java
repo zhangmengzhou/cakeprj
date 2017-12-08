@@ -3,6 +3,7 @@ package com.bear.cakeonline.admin.controller;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,44 +28,42 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/save")
-	public String save(Model model,@RequestParam String adminname,@RequestParam String password,@RequestParam String realname) {
+	public String save(@RequestParam String adminname,@RequestParam String password,@RequestParam String realname) {
 		Admin admin = new Admin();
 		admin.setAdminName(adminname);
 		admin.setPassword(password);
 		admin.setRealName(realname);
 		adminServiceImpl.saveAdmin(admin);
-		model.addAttribute("username",adminname);
 		return "";
 	}
 	
 	@RequestMapping("/update")
-	public String update(Model model,@RequestParam String adminname,@RequestParam String password,@RequestParam String realname) {
+	public String update(@RequestParam String adminname,@RequestParam String password,@RequestParam String realname) {
 		Admin admin = new Admin();
 		admin.setAdminName(adminname);
 		admin.setPassword(password);
 		admin.setRealName(realname);
 		adminServiceImpl.updateAdmin(admin);
-		model.addAttribute("adminname",adminname);
 		return "";
 	}
 	
 	@RequestMapping("/login")
-	public String login(Model model,@RequestParam String adminname,@RequestParam String password) {
+	public String login(Model model,HttpServletRequest request,@RequestParam String adminname,@RequestParam String password) {
 		List<Admin> list=this.adminServiceImpl.listAll();
-		for(int i = 0;i < list.size();i++) {
-			if(list.get(i).getAdminName().equals(adminname) && list.get(i).getPassword().equals(password)) {
-				model.addAttribute("adminname",adminname);
-				break;
+		for(Admin admin:list) {
+			if(admin.getAdminName().equals(adminname) && admin.getPassword().equals(password)) {
+				request.getSession().setAttribute("admin",admin);
+				return "background";
 			}
 		}
 		model.addAttribute("fails","ÃÜÂë´íÎó!");
-		return "admin";
+		return "adminlogin";
 	}
 	
 	@RequestMapping("/loginout")
 	public String loginout(Model model) {
 		model.addAttribute("adminname",null);
-		return "";
+		return "adminlogin";
 	}
 	
 	@RequestMapping("/delete")

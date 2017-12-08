@@ -11,7 +11,7 @@ public class Order {
 	private int id;
 	private User user;
 	private Date odate;            //下单时间
-	private int status;            //订单状态  0未处理   1已处理
+	private int status;            //订单状态  0未处理   1已处理  2用户退订
 	private Set<OrderDetail> orderDetails;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -21,7 +21,7 @@ public class Order {
 	public void setId(int id) {
 		this.id = id;
 	}
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="userId")
 	public User getUser() {
 		return user;
@@ -42,7 +42,7 @@ public class Order {
 		this.status = status;
 	}
 	@OneToMany(mappedBy="order", targetEntity=OrderDetail.class, 
-	        cascade=CascadeType.ALL)
+	        cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	public Set<OrderDetail> getOrderDetails() {
 		return orderDetails;
 	}

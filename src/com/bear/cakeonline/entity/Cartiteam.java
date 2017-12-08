@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Table(name="cartiteam")
 public class Cartiteam {
 	private int id;
-	private Cart cart;
+	private int cartid;
 	private Cake cake;
 	private int count;
 	@Id
@@ -16,15 +16,13 @@ public class Cartiteam {
 	public void setId(int id) {
 		this.id = id;
 	}
-	@ManyToOne
-	@JoinColumn(name="cartid")
-	public Cart getCart() {
-		return cart;
+	public int getCartid() {
+		return cartid;
 	}
-	public void setCart(Cart cart) {
-		this.cart = cart;
+	public void setCartid(int cartid) {
+		this.cartid = cartid;
 	}
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
 	@JoinColumn(name="cakeid")
 	public Cake getCake() {
 		return cake;

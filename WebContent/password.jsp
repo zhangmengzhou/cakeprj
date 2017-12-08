@@ -216,10 +216,8 @@
 				<div class="header-right cart">
 					<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 					<div class="cart-box">
-						<h4><a href="checkout.jsp">
-							<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>) 
-						</a></h4>
-						<p><a href="javascript:;" class="simpleCart_empty">清空购物车</a></p>
+						<p><a href="${contextpath }/cartiteam/show.do?cartid=${user.cart.cartid}" >查看购物车</a></p>
+						<p><a href="${contextpath }/order/show.do?userid=${user.id }" >查看订单</a></p>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -257,7 +255,7 @@
 						<h3>登录信息</h3>
 						<div class="input">
 							<span>新密码<label>*</label></span>
-							<input type="password" name="password"/>
+							<input type="password" name="password" id="id5"/><span id="id7" style="color:red"></span>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -329,3 +327,15 @@
 	</div>
 </body>
 </html>
+<script>
+$("#id5").mouseout(function(){
+	if($("#id5").val().length<6 && $("#id5").val().length>=0)
+		{
+		  $("#id7").html("密码必须大于6位");
+		}
+});
+$("#id5").mouseover(function(){
+		  $("#id7").html("");
+		}
+);
+</script>

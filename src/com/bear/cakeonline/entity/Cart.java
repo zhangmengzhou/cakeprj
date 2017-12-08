@@ -7,31 +7,22 @@ import javax.persistence.*;
 @Entity
 @Table(name="cart")
 public class Cart {
-	private int id;
-	private User user;
+	private int cartid;
 	private Set<Cartiteam> cartiteam;
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY) 
-	public int getId() {
-		return id;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	public int getCartid() {
+		return cartid;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCartid(int cartid) {
+		this.cartid = cartid;
 	}
-	@OneToOne(mappedBy="cart")
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
-	@OneToMany(mappedBy="cart", targetEntity=Cartiteam.class, 
-	        cascade=CascadeType.ALL)
+	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+	@JoinColumn(name="cartid")
 	public Set<Cartiteam> getCartiteam() {
 		return cartiteam;
 	}
 	public void setCartiteam(Set<Cartiteam> cartiteam) {
 		this.cartiteam = cartiteam;
 	}
-	
 }

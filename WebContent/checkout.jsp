@@ -216,10 +216,8 @@
 				<div class="header-right cart">
 					<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 					<div class="cart-box">
-						<h4><a href="checkout.jsp">
-							<span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>) 
-						</a></h4>
-						<p><a href="javascript:;" class="simpleCart_empty">清空购物车</a></p>
+						<p><a href="${contextpath }/cartiteam/show.do?cartid=${user.cart.cartid}" >查看购物车</a></p>
+						<p><a href="${contextpath }/order/show.do?userid=${user.id }" >查看订单</a></p>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -232,94 +230,39 @@
 	<!--cart-items-->
 	<div class="cart-items">
 		<div class="container">
-			<h2>My Shopping Cart(3)</h2>
-			<script>$(document).ready(function(c) {
-				$('.close1').on('click', function(c){
-					$('.cart-header').fadeOut('slow', function(c){
-						$('.cart-header').remove();
-					});
-					});	  
-				});
-			</script>
-			<div class="cart-header">
-				<div class="close1"> </div>
-				<div class="cart-sec simpleCart_shelfItem">
-					<div class="cart-item cyc">
-						 <img src="${contextpath }/static/images/m1.png" class="img-responsive" alt="">
-					</div>
-					<div class="cart-item-info">
-						<h3><a href="#"> Lorem Ipsum is not simply </a><span>Pickup time:</span></h3>
-						<ul class="qty">
-							<li><p>Min. order value:</p></li>
-							<li><p>FREE delivery</p></li>
-						</ul>
-						<div class="delivery">
-							<p>Service Charges : $10.00</p>
-							<span>Delivered in 1-1:30 hours</span>
+			<h2>我的购物车（总价：￥${sum }）</h2>
+			<c:if test="${list == null }">
+				<h2>未添加商品</h2>
+			</c:if>
+			<c:if test="${order != null }">
+				<h2>${order }</h2>
+			</c:if>
+			<c:if test="${list != null && order == null }">
+				<c:forEach items="${list }" var="cartiteam">
+					<div class="cart-header">
+						<a href="${contextpath }/cartiteam/delete.do?id=${cartiteam.id }&cartid=${cartiteam.cartid }"><div class="close1"></div></a>
+						<div class="cart-sec simpleCart_shelfItem">
+							<div class="cart-item cyc">
+								 <img src="${contextpath }/static/images/${cartiteam.cake.listimg }" class="img-responsive" alt="">
+							</div>
+							<div class="cart-item-info">
+								<h3><a href="#"> ${cartiteam.cake.name } </a><span>市区内1-2小时内送达，特殊蛋糕请提前预定！</span></h3>
+								<ul class="qty">
+									<li><p>免费送达</p></li>
+									<li><p>服务费 : ￥0.00</p></li>
+								</ul>
+								<div class="delivery">
+									<p>数量：${cartiteam.count }</p>
+									<span>Yummy家的${cartiteam.cake.cakeType.name }</span>
+									<div class="clearfix"></div>
+								</div>	
+							</div>
 							<div class="clearfix"></div>
-						</div>	
+						</div>
 					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-			 <script>$(document).ready(function(c) {
-					$('.close2').on('click', function(c){
-							$('.cart-header2').fadeOut('slow', function(c){
-						$('.cart-header2').remove();
-					});
-					});	  
-					});
-			 </script>
-			<div class="cart-header2">
-				<div class="close2"> </div>
-				<div class="cart-sec simpleCart_shelfItem">
-					<div class="cart-item cyc">
-						 <img src="${contextpath }/static/images/m2.png" class="img-responsive" alt="">
-					</div>
-					<div class="cart-item-info">
-						<h3><a href="#"> Lorem Ipsum is not simply </a><span>Pickup time:</span></h3>
-						<ul class="qty">
-							<li><p>Min. order value:</p></li>
-							<li><p>FREE delivery</p></li>
-						</ul>
-						<div class="delivery">
-						<p>Service Charges : $10.00</p>
-						<span>Delivered in 1-1:30 hours</span>
-						<div class="clearfix"></div>
-					</div>	
-				   </div>
-				   <div class="clearfix"></div>
-				</div>
-			</div>
-				<script>$(document).ready(function(c) {
-					$('.close3').on('click', function(c){
-							$('.cart-header3').fadeOut('slow', function(c){
-						$('.cart-header3').remove();
-					});
-					});	  
-					});
-				</script>
-			<div class="cart-header3">
-				<div class="close3"> </div>
-				<div class="cart-sec simpleCart_shelfItem">
-					<div class="cart-item cyc">
-						 <img src="${contextpath }/static/images/m3.png" class="img-responsive" alt="">
-					</div>
-					<div class="cart-item-info">
-						<h3><a href="#"> Lorem Ipsum is not simply </a><span>Pickup time:</span></h3>
-						<ul class="qty">
-							<li><p>Min. order value:</p></li>
-							<li><p>FREE delivery</p></li>
-						</ul>
-						<div class="delivery">
-							<p>Service Charges : $10.00</p>
-							<span>Delivered in 1-1:30 hours</span>
-							<div class="clearfix"></div>
-						</div>	
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>		
+				</c:forEach>
+				<p><a href="${contextpath }/order/save.do?userid=${user.id }"><h3>结算下单</h3></a></p>
+			</c:if>	
 		</div>
 	</div>
 	<!--//checkout-->	

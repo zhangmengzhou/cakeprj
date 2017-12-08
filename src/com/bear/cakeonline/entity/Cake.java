@@ -80,7 +80,7 @@ public class Cake {
 	public void setCakedate(Date cakedate) {
 		this.cakedate = cakedate;
 	}
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
 	@JoinColumn(name="caketypeID")
 	public CakeType getCakeType() {
 		return cakeType;

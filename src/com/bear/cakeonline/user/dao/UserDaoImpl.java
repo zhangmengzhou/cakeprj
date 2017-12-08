@@ -11,6 +11,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
+import com.bear.cakeonline.entity.Cart;
 import com.bear.cakeonline.entity.Order;
 import com.bear.cakeonline.entity.User;
 
@@ -35,6 +36,9 @@ public class UserDaoImpl {
 	public void saveUser(User user) {
 		Session session = sessionFactory.getCurrentSession();
 		Transaction tx = session.beginTransaction();
+		Cart cart = new Cart();
+		session.save(cart);
+		user.setCart(cart);
 		session.save(user);
 		tx.commit();
 	}

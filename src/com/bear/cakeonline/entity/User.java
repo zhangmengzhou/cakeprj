@@ -47,15 +47,15 @@ public class User {
 		this.address = address;
 	}
 	@OneToMany(mappedBy="user", targetEntity=Order.class, 
-	        cascade=CascadeType.MERGE)
+	        cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	public Set<Order> getOrders() {
 		return orders;
 	}
 	public void setOrders(Set<Order> orders) {
 		this.orders = orders;
 	}
-	@OneToOne()
-	@JoinColumn(name="cartid") 
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="cartid",unique=true) 
 	public Cart getCart() {
 		return cart;
 	}
