@@ -13,7 +13,9 @@ import org.springframework.stereotype.Repository;
 
 import com.bear.cakeonline.entity.Cart;
 import com.bear.cakeonline.entity.Order;
+import com.bear.cakeonline.entity.OrderDetail;
 import com.bear.cakeonline.entity.User;
+import com.bear.cakeonline.util.Page;
 
 @Repository
 public class UserDaoImpl {
@@ -26,11 +28,19 @@ public class UserDaoImpl {
 		return q.list();
 	}
 	
-	public Set<Order> findOrders(String username) {
-		Query q=this.sessionFactory.getCurrentSession().createQuery("from User where username=?");
-		q.setParameter(0,username);
-		Set<Order> orders = (Set)q.list();
-		return orders;
+	public List<User> bgfindAll(int page){
+		Session session=this.sessionFactory.getCurrentSession();
+		Query q = session.createQuery("from User");
+		q.setFirstResult((page-1)*10); 
+		q.setMaxResults(10);
+		long t = (long)(session.createQuery("select count(*) from User").uniqueResult());
+		if(t == 0)
+			Page.totalpages = 0;
+		else if(t%10 == 0)
+			Page.totalpages = (int)t/10;
+		else
+			Page.totalpages = (int)t/10 + 1;
+		return q.list();
 	}
 	
 	public void saveUser(User user) {
@@ -43,18 +53,20 @@ public class UserDaoImpl {
 		tx.commit();
 	}
 	
-	public boolean deleteUser(String username) {
-		Session session = sessionFactory.getCurrentSession();
-		Transaction tx = session.beginTransaction();
-		String hql = "delete from User where username=?";
-		Query q = session.createQuery(hql);
-		q.setParameter(0,username);
-		int ret = q.executeUpdate();
-		tx.commit();
-		if(ret != 0)
-			return true;
-		else
-			return false;
+	public boolean deleteUser(int id) {
+		Session session = sessionFactory.openSession();
+		Transaction tx = null;
+		try {  
+		    tx = session.beginTransaction();  
+			User user = session.load(User.class, id);
+			session.delete(user);
+		} catch (Exception e) {  
+			 tx.rollback();
+		} finally {  
+		     tx.commit(); 
+		     session.close();
+		}  
+		return true;
 	}
 	
 	public boolean updateUser(User user) {

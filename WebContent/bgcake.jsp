@@ -64,13 +64,58 @@
 					<ul>
 							<li><img src="images/home.png"></li>
 								<li style="margin-left:25px;">您当前的位置：</li>
-								<li><a href="#">系统公告</a></li>
+								<li><a href="#">蛋糕管理</a></li>
 								<li>></li>
-								<li><a href="#">最新公告</a></li>
+								<li><a href="#">蛋糕信息</a></li>
 						</ul>
 			</div>
 			<div class="main">
-				<p class="book">&nbsp;&nbsp;本店上新9款蛋糕，欢迎抢购</p>
+			<center>
+				<c:if test="${cakelist == null }">
+					<h1>无蛋糕</h1>
+				</c:if>
+				<c:if test="${cakelist != null }">
+					<h1>蛋糕列表</h1>
+					<table align="center">
+						<tr>
+							<th width="60px">蛋糕Id</th>
+							<th width="100px">蛋糕名</th>
+							<th width="200px">蛋糕介绍</th>
+							<th width="60px">价格</th>
+							<th width="60px">折后价</th>
+							<th width="200px">蛋糕图片</th>
+							<th width="200px">上架日期</th>
+							<th width="60px">蛋糕类型</th>
+							<th width="60px">修改</th>
+							<th width="60px">删除</th>
+						</tr>
+						<c:forEach items="${cakelist }" var="cake">
+							<tr>
+								<td align="center">${cake.id }</td>
+								<td align="center">${cake.name }</td>
+								<td align="center">${cake.description }</td>
+								<td align="center">￥${cake.price }</td>
+								<td align="center">￥${cake.discountprice }</td>
+								<td align="center"><img src="${contextpath }/static/images/${cake.listimg }" alt="蛋糕img" width="200px"></td>
+								<td align="center">${cake.cakedate }</td>
+								<td align="center">${cake.cakeType.name }</td>
+								<td align="center"><a href="${contextpath }/bgcakeupdate.jsp?cakeid=${cake.id }">修改</a></td>
+								<td align="center"><a href="${contextpath }/cake/delete.do?id=${cake.id }&page=${page }">删除</a></td>
+							</tr>
+						</c:forEach>
+						<tr height="200px">
+							<form method="POST" action="${contextpath }/cake/bglist.do">
+			                    <td colspan="10" align="center" >第${page }页&nbsp;&nbsp;共${totalpages }页<a href="${contextpath }/cake/bglist.do?page=1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首页</a>
+			                    <a href="${contextpath }/cake/bglist.do?page=${(page<=1)?page:(page-1) }">&nbsp;&nbsp;&nbsp;&nbsp;上一页</a>
+			                    <a href="${contextpath }/cake/bglist.do?page=${(page>=totalpages)?totalpages:(page+1) }">&nbsp;&nbsp;&nbsp;&nbsp;下一页</a>
+			                    <a href="${contextpath }/cake/bglist.do?page=${totalpages }&value=${value }">&nbsp;&nbsp;&nbsp;&nbsp;最后一页</a>
+			                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;转到第:<input type="text" name="page" size="2">页&nbsp;&nbsp;<input type="submit" value="GO" name="cndok">
+			                    </td>
+			                </form>
+			            </tr>
+					</table>
+				</c:if>
+				</center>
 			</div>
 		</div>
 </div>

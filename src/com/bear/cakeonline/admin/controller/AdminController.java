@@ -61,8 +61,8 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/loginout")
-	public String loginout(Model model) {
-		model.addAttribute("adminname",null);
+	public String loginout(HttpServletRequest request) {
+		request.getSession().removeAttribute("admin");
 		return "adminlogin";
 	}
 	

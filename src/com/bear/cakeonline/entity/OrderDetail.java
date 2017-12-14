@@ -17,7 +17,7 @@ public class OrderDetail {
 	public void setId(int id) {
 		this.id = id;
 	}
-	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+	@ManyToOne(cascade=CascadeType.MERGE,fetch=FetchType.EAGER)
 	@JoinColumn(name="cakeId")
 	public Cake getCake() {
 		return cake;
@@ -31,7 +31,7 @@ public class OrderDetail {
 	public void setCount(int count) {
 		this.count = count;
 	}
-	@ManyToOne(fetch=FetchType.EAGER)
+	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
 	@JoinColumn(name="orderId")
 	public Order getOrder() {
 		return order;

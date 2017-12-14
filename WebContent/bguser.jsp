@@ -64,13 +64,47 @@
 					<ul>
 							<li><img src="images/home.png"></li>
 								<li style="margin-left:25px;">您当前的位置：</li>
-								<li><a href="#">系统公告</a></li>
+								<li><a href="#">用户管理</a></li>
 								<li>></li>
-								<li><a href="#">最新公告</a></li>
+								<li><a href="#">用户信息</a></li>
 						</ul>
 			</div>
 			<div class="main">
-				<p class="book">&nbsp;&nbsp;本店上新9款蛋糕，欢迎抢购</p>
+			<center>
+				<c:if test="${userlist == null }">
+					<h1>无用户</h1>
+				</c:if>
+				<c:if test="${userlist != null }">
+					<h1>用户列表</h1>
+					<table align="center">
+						<tr>
+							<th width="60px">用户Id</th>
+							<th width="100px">用户名称</th>
+							<th width="100px">用户电话</th>
+							<th width="200px">用户地址</th>
+							<th width="60px">删除</th>
+						</tr>
+						<c:forEach items="${userlist }" var="user">
+							<tr>
+								<td align="center">${user.id }</td>
+								<td align="center">${user.username }</td>
+								<td align="center">${user.phone }</td>
+								<td align="center">${user.address }</td>
+								<td align="center"><a href="${contextpath }/user/delete.do?id=${user.id }&page=${page }">删除</a></td>
+							</tr>
+						</c:forEach>
+					</table>
+					<div>
+					<form method="POST" action="${contextpath }/user/list.do" style="clear:left">
+			                    第${page }页&nbsp;&nbsp;共${totalpages }页<a href="${contextpath }/user/list.do?page=1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首页</a>
+			           <a href="${contextpath }/user/list.do?page=${(page<=1)?page:(page-1) }">&nbsp;&nbsp;&nbsp;&nbsp;上一页</a>
+			           <a href="${contextpath }/user/list.do?page=${(page>=totalpages)?totalpages:(page+1) }">&nbsp;&nbsp;&nbsp;&nbsp;下一页</a>
+			           <a href="${contextpath }/user/list.do?page=${totalpages }&value=${value }">&nbsp;&nbsp;&nbsp;&nbsp;最后一页</a>
+			           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;转到第:<input type="text" name="page" size="2">页&nbsp;&nbsp;<input type="submit" value="GO" name="cndok"> 
+	 				</form>
+ 				</div>
+				</c:if>
+				</center>
 			</div>
 		</div>
 </div>

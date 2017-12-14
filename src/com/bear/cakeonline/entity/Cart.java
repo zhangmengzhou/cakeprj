@@ -17,8 +17,8 @@ public class Cart {
 	public void setCartid(int cartid) {
 		this.cartid = cartid;
 	}
-	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
-	@JoinColumn(name="cartid")
+	@OneToMany(mappedBy="cartid",targetEntity=Cartiteam.class,
+			cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	public Set<Cartiteam> getCartiteam() {
 		return cartiteam;
 	}

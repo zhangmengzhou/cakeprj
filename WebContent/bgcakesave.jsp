@@ -64,15 +64,61 @@
 					<ul>
 							<li><img src="images/home.png"></li>
 								<li style="margin-left:25px;">您当前的位置：</li>
-								<li><a href="#">系统公告</a></li>
+								<li><a href="#">蛋糕管理</a></li>
 								<li>></li>
-								<li><a href="#">最新公告</a></li>
+								<li><a href="#">新增蛋糕</a></li>
 						</ul>
 			</div>
 			<div class="main">
-				<p class="book">&nbsp;&nbsp;本店上新9款蛋糕，欢迎抢购</p>
-			</div>
+			<center>
+				<h1>新增蛋糕</h1>
+					<form action="${contextpath }/cake/save.do" method="post" enctype="multipart/form-data">
+						<table align="center">
+							<tr height="40px">
+								<th>蛋糕名</th>
+								<td><input type="text" name="name"/></td>
+							</tr>
+							<tr height="40px">
+								<th>蛋糕介绍</th>
+								<td><input type="text" name="description"/></td>
+							</tr>
+							<tr height="40px">
+								<th>价格</th>
+								<td><input type="text" name="price"/></td>
+							</tr>
+							<tr height="40px">
+								<th>折后价</th>
+								<td><input type="text" name="discountprice"/></td>
+							</tr>
+							<tr height="40px">
+								<th>蛋糕图片1</th>
+								<td><input type="file" name="listimg"/></td>
+							</tr>
+							<tr height="40px">
+								<th>蛋糕图片2</th>
+								<td><input type="file" name="img1"/></td>
+							</tr>
+							<tr height="40px">
+								<th>蛋糕图片3</th>
+								<td><input type="file" name="img2"/></td>
+							</tr>
+							<tr height="40px">
+								<th>蛋糕图片4</th>
+								<td><input type="file" name="img3"/></td>
+							</tr>
+							<tr height="40px">
+								<th>蛋糕类型</th>
+								<td><input type="text" name="cakeType"/>&nbsp;&nbsp;&nbsp;&nbsp;
+								1：生日蛋糕&nbsp;&nbsp;2：爱情蛋糕&nbsp;&nbsp;3：婚礼蛋糕</td>
+							</tr>
+							<tr height="40px">
+								<td colspan="2" align="center"><input type="submit" value="保存"/></td>
+							</tr>
+						</table>
+					</form>
+			</center>
 		</div>
+	</div>
 </div>
 <div class="bottom"></div>
 <div id="footer"><p>Copyright©  2015 版权所有 京ICP备05019125号-10</p></div>

@@ -272,7 +272,7 @@
 					</div>
 				</c:forEach>
 				<div>
-					<form method="POST" action="${contextpath }/cake/list.do&value=${value }&value1=${value1 }&value2=${value2 }&value3=${value3 }&value4=${value4 }&price1=${price1 }&price2=${price2 }" style="clear:left">
+					<form method="POST" action="${contextpath }/cake/list.do?value=${value }&value1=${value1 }&value2=${value2 }&value3=${value3 }&value4=${value4 }&price1=${price1 }&price2=${price2 }" style="clear:left">
 			            <table border="0" align="center" >
 			                <tr>
 			                    <td>第${page }页&nbsp;&nbsp;共${totalpages }页<a href="${contextpath }/cake/list.do?page=1&value=${value }&value1=${value1 }&value2=${value2 }&value3=${value3 }&value4=${value4 }&price1=${price1 }&price2=${price2 }">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首页</a></td>

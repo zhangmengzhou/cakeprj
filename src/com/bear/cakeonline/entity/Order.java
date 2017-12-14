@@ -21,7 +21,7 @@ public class Order {
 	public void setId(int id) {
 		this.id = id;
 	}
-	@ManyToOne(fetch=FetchType.EAGER)
+	@ManyToOne(cascade=CascadeType.MERGE,fetch=FetchType.EAGER)
 	@JoinColumn(name="userId")
 	public User getUser() {
 		return user;

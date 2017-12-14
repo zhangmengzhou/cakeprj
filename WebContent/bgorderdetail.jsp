@@ -64,13 +64,35 @@
 					<ul>
 							<li><img src="images/home.png"></li>
 								<li style="margin-left:25px;">您当前的位置：</li>
-								<li><a href="#">系统公告</a></li>
+								<li><a href="#">订单管理</a></li>
 								<li>></li>
-								<li><a href="#">最新公告</a></li>
+								<li><a href="#">订单详情</a></li>
 						</ul>
 			</div>
 			<div class="main">
-				<p class="book">&nbsp;&nbsp;本店上新9款蛋糕，欢迎抢购</p>
+			<center>
+				<c:if test="${detaillist != null }">
+					<h1>订单详情列表</h1>
+					<table align="center">
+						<tr>
+							<th width="60px">id</th>
+							<th width="60px">蛋糕名称</th>
+							<th width="200px">蛋糕图片</th>
+							<th width="100px">购买数量</th>
+						</tr>
+						<c:forEach items="${detaillist }" var="od">
+							<tr>
+								<td align="center">${od.id }</td>
+								<td align="center">${od.cake.name }</td>
+								<td align="center"><img src="${contextpath }/static/images/${od.cake.listimg }" alt="蛋糕图片" width="200px"></td>
+								<td align="center">${od.count }</td>
+							</tr>
+						</c:forEach>
+					</table>
+					<div>
+ 				</div>
+				</c:if>
+				</center>
 			</div>
 		</div>
 </div>

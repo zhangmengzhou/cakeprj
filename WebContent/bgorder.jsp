@@ -64,13 +64,63 @@
 					<ul>
 							<li><img src="images/home.png"></li>
 								<li style="margin-left:25px;">您当前的位置：</li>
-								<li><a href="#">系统公告</a></li>
+								<li><a href="#">订单管理</a></li>
 								<li>></li>
-								<li><a href="#">最新公告</a></li>
+								<li><a href="#">查看订单</a></li>
 						</ul>
 			</div>
 			<div class="main">
-				<p class="book">&nbsp;&nbsp;本店上新9款蛋糕，欢迎抢购</p>
+			<center>
+				<c:if test="${orderlist == null }">
+					<h1>无订单</h1>
+				</c:if>
+				<c:if test="${orderlist != null }">
+					<h1>订单列表</h1>
+					<table align="center">
+						<tr>
+							<th width="60px">订单Id</th>
+							<th width="100px">下单用户</th>
+							<th width="200px">下单时间</th>
+							<th width="100px">订单状态</th>
+							<th width="100px">订单详情</th>
+							<th width="60px">处理</th>
+						</tr>
+						<c:forEach items="${orderlist }" var="order">
+							<tr>
+								<td align="center">${order.id }</td>
+								<td align="center">${order.user.username }</td>
+								<td align="center">${order.odate }</td>
+								<td align="center">
+									<c:if test="${order.status == 0 }">
+										未处理
+									</c:if>
+									<c:if test="${order.status == 1 }">
+										已处理
+									</c:if>
+									<c:if test="${order.status == 2 }">
+										用户退订
+									</c:if>
+								</td>
+								<td align="center"><a href="${contextpath }/order/detaillist.do?id=${order.id }">订单详情</a></td>
+								<td align="center">
+									<c:if test="${order.status != 2 }">
+										<a href="${contextpath }/order/bgupdate.do?orderid=${order.id }&page=${page }">处理</a>
+									</c:if>
+								</td>
+							</tr>
+						</c:forEach>
+					</table>
+					<div>
+					<form method="POST" action="${contextpath }/order/list.do" style="clear:left">
+			                    第${page }页&nbsp;&nbsp;共${totalpages }页<a href="${contextpath }/order/list.do?page=1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首页</a>
+			           <a href="${contextpath }/order/list.do?page=${(page<=1)?page:(page-1) }">&nbsp;&nbsp;&nbsp;&nbsp;上一页</a>
+			           <a href="${contextpath }/order/list.do?page=${(page>=totalpages)?totalpages:(page+1) }">&nbsp;&nbsp;&nbsp;&nbsp;下一页</a>
+			           <a href="${contextpath }/order/list.do?page=${totalpages }&value=${value }">&nbsp;&nbsp;&nbsp;&nbsp;最后一页</a>
+			           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;转到第:<input type="text" name="page" size="2">页&nbsp;&nbsp;<input type="submit" value="GO" name="cndok"> 
+	 				</form>
+ 				</div>
+				</c:if>
+				</center>
 			</div>
 		</div>
 </div>

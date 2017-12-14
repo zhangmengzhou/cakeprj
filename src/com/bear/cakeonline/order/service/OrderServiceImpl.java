@@ -1,6 +1,7 @@
 package com.bear.cakeonline.order.service;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.annotation.Resource;
 
@@ -17,8 +18,13 @@ public class OrderServiceImpl {
 	private OrderDaoImpl orderDaoImpl;
 	
 	@Transactional(readOnly=true)
-	public List<Order> listAll(){
-		return this.orderDaoImpl.findAll();
+	public List<Order> listAll(int page){
+		return this.orderDaoImpl.findAll(page);
+	}
+	
+	@Transactional(readOnly=true)
+	public Set<OrderDetail> find(int id){
+		return this.orderDaoImpl.findDetail(id);
 	}
 	
 	@Transactional(readOnly=true)

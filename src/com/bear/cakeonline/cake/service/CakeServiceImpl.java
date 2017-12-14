@@ -18,7 +18,43 @@ public class CakeServiceImpl {
 	
 	@Transactional(readOnly=true)
 	public List<Cake> listCake(int page,String value,String value1,String value2,String value3,String value4,String price1,String price2){
-		return this.cakeDaoImpl.findCake(page,value,value1,value2,value3,value4,price1,price2);
+		String hql1 = "from Cake";
+		if(value != null && !"".equals(value)) {
+			hql1 = hql1 + " where name like '%" + value + "%' or description like '%" + value + "%'";
+		}
+		if(value1 != null && !"".equals(value1)) {
+			if(hql1.equals("from Cake"))
+				hql1 = hql1 + " where description like '%" + value1 + "%'";
+			else
+				hql1 = hql1 + " and description like '%" + value1 + "%'";
+		}	
+		if(value2 != null && !"".equals(value2)) {
+			if(hql1.equals("from Cake"))
+				hql1 = hql1 + " where description like '%" + value2 + "%'";
+			else
+				hql1 = hql1 + " and description like '%" + value2 + "%'";
+		}
+		if(value3 != null && !"".equals(value3)) {
+			if(hql1.equals("from Cake"))
+				hql1 = hql1 + " where description like '%" + value3 + "%'";
+			else
+				hql1 = hql1 + " and description like '%" + value3 + "%'";
+		}
+		if(value4 != null && !"".equals(value4)) {
+			if(hql1.equals("from Cake"))
+				hql1 = hql1 + " where description like '%" + value4 + "%'";
+			else
+				hql1 = hql1 + " and description like '%" + value4 + "%'";
+		}
+		if(price1 != null && price2 != null && !"".equals(price1) && !"".equals(price2)) {
+			if(hql1.equals("from Cake")) {
+				hql1 = hql1 + " where discountprice between " + price1 + " and " + price2;
+			}else {
+				hql1 = hql1 + " and discountprice between " + price1 + " and " + price2;
+			}
+		}
+		String hql2 = "select count(*)" + hql1;
+		return this.cakeDaoImpl.findCake(hql1,hql2,page);
 	}
 	
 	public Cake single(int id) {

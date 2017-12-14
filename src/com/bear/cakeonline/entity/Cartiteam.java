@@ -22,7 +22,7 @@ public class Cartiteam {
 	public void setCartid(int cartid) {
 		this.cartid = cartid;
 	}
-	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+	@ManyToOne(cascade=CascadeType.MERGE,fetch=FetchType.EAGER)
 	@JoinColumn(name="cakeid")
 	public Cake getCake() {
 		return cake;

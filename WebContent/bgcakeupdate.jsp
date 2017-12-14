@@ -64,15 +64,40 @@
 					<ul>
 							<li><img src="images/home.png"></li>
 								<li style="margin-left:25px;">您当前的位置：</li>
-								<li><a href="#">系统公告</a></li>
+								<li><a href="#">蛋糕管理</a></li>
 								<li>></li>
-								<li><a href="#">最新公告</a></li>
+								<li><a href="#">修改蛋糕信息</a></li>
 						</ul>
 			</div>
 			<div class="main">
-				<p class="book">&nbsp;&nbsp;本店上新9款蛋糕，欢迎抢购</p>
-			</div>
+			<center>
+				<h1>修改蛋糕信息</h1>
+					<form action="${contextpath }/cake/update.do?id=${param.cakeid }" method="post">
+						<table align="center">
+							<tr height="40px">
+								<th>蛋糕名</th>
+								<td><input type="text" name="name"/></td>
+							</tr>
+							<tr height="40px">
+								<th>蛋糕介绍</th>
+								<td><input type="text" name="description"/></td>
+							</tr>
+							<tr height="40px">
+								<th>价格</th>
+								<td><input type="text" name="price"/></td>
+							</tr>
+							<tr height="40px">
+								<th>折后价</th>
+								<td><input type="text" name="discountprice"/></td>
+							</tr>
+							<tr height="40px">
+								<td colspan="2" align="center"><input type="submit" value="保存"/></td>
+							</tr>
+						</table>
+					</form>
+			</center>
 		</div>
+	</div>
 </div>
 <div class="bottom"></div>
 <div id="footer"><p>Copyright©  2015 版权所有 京ICP备05019125号-10</p></div>

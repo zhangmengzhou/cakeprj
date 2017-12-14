@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bear.cakeonline.user.service.UserServiceImpl;
+import com.bear.cakeonline.util.Page;
 import com.bear.cakeonline.entity.User;
 
 @Controller
@@ -21,10 +22,18 @@ public class UserController {
 	private UserServiceImpl userServiceImpl;
 	
 	@RequestMapping("/list")
-	public String list(Model model){
-		List<User> list=this.userServiceImpl.listAll();
-		model.addAttribute("userlist", list);
-		return "";
+	public String list(Model model,@RequestParam(required=false) String page){
+		if(page == null)
+			page = "1";
+		List<User> list=this.userServiceImpl.bglist(Integer.parseInt(page));
+		if(list.size() == 0) {
+			model.addAttribute("userlist", null);
+		} else {
+			model.addAttribute("userlist", list);
+			model.addAttribute("page", Integer.parseInt(page));
+			model.addAttribute("totalpages", Page.totalpages);
+		}
+		return "bguser";
 	}
 	
 	@RequestMapping("/save")
@@ -96,8 +105,8 @@ public class UserController {
 	}
 	
 	@RequestMapping("/delete")
-	public String delete(@RequestParam String username) {
-		userServiceImpl.deleteUser(username);
-		return "";
+	public String delete(Model model,@RequestParam int id,@RequestParam String page) {
+		userServiceImpl.deleteUser(id);
+		return list(model,page);
 	}
 }
